@@ -6,16 +6,19 @@ public class Player : MonoBehaviour
 {
     public float maxSleep = 1f;
     public float currentSleep;
-    private float sleepDecrease = 0.01f;
+    private float sleepDecrease = 0.02f;
 
     public float maxFood = 1f;
     public float currentFood;
+    private float foodDecrease = 0.02f;
 
     public float maxToilet = 1f;
     public float currentToilet;
+    private float toiletDecrease = 0.02f;
 
     public float maxStudy = 1f;
     public float currentStudy;
+    private float studyDecrease = 0.02f;
 
     public SleepBarScript sleepBar;
     public FoodBarScript foodBar;
@@ -44,6 +47,15 @@ public class Player : MonoBehaviour
         DecreaseSleep(sleepDecrease * Time.deltaTime);
         sleepBar.SetSleep(currentSleep);
 
+        DecreaseFood(foodDecrease * Time.deltaTime);
+        foodBar.SetFood(currentFood);
+
+        DecreaseToilet(toiletDecrease * Time.deltaTime);
+        toiletBar.SetToilet(currentToilet);
+
+        DecreaseStudy(studyDecrease * Time.deltaTime);
+        studyBar.SetStudy(currentStudy);
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             DecreaseFood(0.1f);
@@ -63,12 +75,44 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SleepButtonPush()
+    {
+        IncreaseSleep(0.5f);
+        sleepBar.SetSleep(currentSleep);
+    }
+
+    public void FoodButtonPush()
+    {
+        IncreaseFood(0.5f);
+        foodBar.SetFood(currentFood);
+    }
+
+    public void IncreaseSleep(float sleep)
+    {
+        if (currentSleep < maxSleep)
+        {
+            if (maxSleep - currentSleep > sleep)
+                currentSleep += sleep;
+            else currentSleep = maxSleep;
+        }
+    }
+
     void DecreaseSleep(float sleep)
     {
         if (currentSleep < sleep)
             currentSleep = 0;
         else
             currentSleep -= sleep;
+    }
+
+    public void IncreaseFood(float food)
+    {
+        if (currentFood < maxFood)
+        {
+            if (maxFood - currentFood > food)
+                currentFood += food;
+            else currentFood = maxFood;
+        }
     }
 
     void DecreaseFood(float food)
