@@ -73,6 +73,15 @@ public class Player : MonoBehaviour
             DecreaseStudy(0.1f);
             studyBar.SetStudy(currentStudy);
         }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            DecreaseSleep(0.1f);
+            sleepBar.SetSleep(currentSleep);
+        }
+
+        
+
     }
 
     public void SleepButtonPush()
@@ -85,6 +94,20 @@ public class Player : MonoBehaviour
     {
         IncreaseFood(0.5f);
         foodBar.SetFood(currentFood);
+    }
+
+
+    public void ToiletButtonPush()
+    {
+        IncreaseToilet(0.5f);
+        toiletBar.SetToilet(currentToilet);
+    }
+
+
+    public void StudyButtonPush()
+    {
+        IncreaseStudy(0.5f);
+        studyBar.SetStudy(currentStudy);
     }
 
     public void IncreaseSleep(float sleep)
@@ -123,12 +146,34 @@ public class Player : MonoBehaviour
             currentFood -= food;
     }
 
+
+    public void IncreaseToilet(float toilet)
+    {
+        if (currentToilet < maxToilet)
+        {
+            if (maxToilet - currentToilet > toilet)
+                currentToilet += toilet;
+            else currentToilet = maxToilet;
+        }
+    }
+
     void DecreaseToilet(float toilet)
     {
         if (currentToilet < toilet)
             currentToilet = 0;
         else
             currentToilet -= toilet;
+    }
+
+
+    public void IncreaseStudy(float study)
+    {
+        if (currentStudy < maxStudy)
+        {
+            if (maxStudy - currentStudy > study)
+                currentStudy += study;
+            else currentStudy = maxStudy;
+        }
     }
 
     void DecreaseStudy(float study)
