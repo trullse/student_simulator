@@ -10,7 +10,7 @@ public class StudyBarScript : MonoBehaviour
     public Gradient gradient;
     public void SetMaxStudy(float study)
     {
-        slider.maxValue = study;
+        slider.maxValue = 1f;
         slider.value = study;
 
         image.color = gradient.Evaluate(study);

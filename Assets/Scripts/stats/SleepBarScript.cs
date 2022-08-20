@@ -11,7 +11,7 @@ public class SleepBarScript : MonoBehaviour
     public void SetMaxSleep(float sleep)
     {
 
-        slider.maxValue = sleep;
+        slider.maxValue = 1f;
 
         slider.value = sleep;
 

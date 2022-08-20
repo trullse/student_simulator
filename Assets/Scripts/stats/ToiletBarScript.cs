@@ -10,7 +10,7 @@ public class ToiletBarScript : MonoBehaviour
     public Gradient gradient;
     public void SetMaxToilet(float toilet)
     {
-        slider.maxValue = toilet;
+        slider.maxValue = 1f;
         slider.value = toilet;
 
         image.color = gradient.Evaluate(toilet);

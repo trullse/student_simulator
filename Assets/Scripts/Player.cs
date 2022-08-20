@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float maxSleep = 1f;
+    public float maxSleep;
     public float currentSleep;
     private float sleepDecrease = 0.02f;
 
-    public float maxFood = 1f;
+    public float maxFood;
     public float currentFood;
     private float foodDecrease = 0.02f;
 
-    public float maxToilet = 1f;
+    public float maxToilet;
     public float currentToilet;
     private float toiletDecrease = 0.02f;
 
-    public float maxStudy = 1f;
+    public float maxStudy;
     public float currentStudy;
     private float studyDecrease = 0.02f;
 
@@ -28,6 +28,11 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxSleep = (PlayerPrefs.HasKey("sleep")) ? PlayerPrefs.GetFloat("sleep") : 1f;
+        maxFood = (PlayerPrefs.HasKey("food")) ? PlayerPrefs.GetFloat("food") : 1f;
+        maxToilet = (PlayerPrefs.HasKey("toilet")) ? PlayerPrefs.GetFloat("toilet") : 1f;
+        maxStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
+
         currentSleep = maxSleep;
         sleepBar.SetMaxSleep(maxSleep);
 
@@ -112,12 +117,14 @@ public class Player : MonoBehaviour
 
     public void IncreaseSleep(float sleep)
     {
-        if (currentSleep < maxSleep)
+        if (currentSleep < 1f)
         {
-            if (maxSleep - currentSleep > sleep)
+            if (1f - currentSleep > sleep)
                 currentSleep += sleep;
-            else currentSleep = maxSleep;
+            else currentSleep = 1f;
         }
+
+        PlayerPrefs.SetFloat("sleep", currentSleep);
     }
 
     void DecreaseSleep(float sleep)
@@ -126,16 +133,20 @@ public class Player : MonoBehaviour
             currentSleep = 0;
         else
             currentSleep -= sleep;
+
+        PlayerPrefs.SetFloat("sleep", currentSleep);
     }
 
     public void IncreaseFood(float food)
     {
-        if (currentFood < maxFood)
+        if (currentFood < 1f)
         {
-            if (maxFood - currentFood > food)
+            if (1f - currentFood > food)
                 currentFood += food;
-            else currentFood = maxFood;
+            else currentFood = 1f;
         }
+
+        PlayerPrefs.SetFloat("food", currentFood);
     }
 
     void DecreaseFood(float food)
@@ -144,17 +155,21 @@ public class Player : MonoBehaviour
             currentFood = 0;
         else
             currentFood -= food;
+
+        PlayerPrefs.SetFloat("food", currentFood);
     }
 
 
     public void IncreaseToilet(float toilet)
     {
-        if (currentToilet < maxToilet)
+        if (currentToilet < 1f)
         {
-            if (maxToilet - currentToilet > toilet)
+            if (1f - currentToilet > toilet)
                 currentToilet += toilet;
-            else currentToilet = maxToilet;
+            else currentToilet = 1f;
         }
+
+        PlayerPrefs.SetFloat("toilet", currentToilet);
     }
 
     void DecreaseToilet(float toilet)
@@ -163,17 +178,21 @@ public class Player : MonoBehaviour
             currentToilet = 0;
         else
             currentToilet -= toilet;
+
+        PlayerPrefs.SetFloat("toilet", currentToilet);
     }
 
 
     public void IncreaseStudy(float study)
     {
-        if (currentStudy < maxStudy)
+        if (currentStudy < 1f)
         {
-            if (maxStudy - currentStudy > study)
+            if (1f - currentStudy > study)
                 currentStudy += study;
-            else currentStudy = maxStudy;
+            else currentStudy = 1f;
         }
+
+        PlayerPrefs.SetFloat("study", currentStudy);
     }
 
     void DecreaseStudy(float study)
@@ -182,5 +201,7 @@ public class Player : MonoBehaviour
             currentStudy = 0;
         else
             currentStudy -= study;
+
+        PlayerPrefs.SetFloat("study", currentStudy);
     }
 }

@@ -10,7 +10,7 @@ public class FoodBarScript : MonoBehaviour
     public Gradient gradient;
     public void SetMaxFood(float food)
     {
-        slider.maxValue = food;
+        slider.maxValue = 1f;
         slider.value = food;
 
         image.color = gradient.Evaluate(food);
