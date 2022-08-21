@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 150019838}
   - component: {fileID: 150019839}
   - component: {fileID: 150019840}
-  - component: {fileID: 150019841}
   m_Layer: 5
   m_Name: SleepBar
   m_TagString: Untagged
@@ -289,18 +288,6 @@ MonoBehaviour:
             m_StringArgument: Bedroom2d
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &150019841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150019836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &228006270
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.5536846, b: 0.90403146, a: 1}
+  m_Color: {r: 0.5471698, g: 0.4668661, b: 0.31694552, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -596,6 +583,7 @@ GameObject:
   - component: {fileID: 834979017}
   - component: {fileID: 834979019}
   - component: {fileID: 834979020}
+  - component: {fileID: 834979021}
   m_Layer: 5
   m_Name: FoodBar
   m_TagString: Untagged
@@ -720,6 +708,35 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+--- !u!114 &834979021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834979016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
+          m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+          m_MethodName: ChangeScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Kitchen2d
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &889165233
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +979,7 @@ GameObject:
   - component: {fileID: 975335420}
   - component: {fileID: 975335423}
   m_Layer: 5
-  m_Name: fridge
+  m_Name: idk_desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98039216, g: 0.41251057, b: 0.023529401, a: 1}
+  m_Color: {r: 0.98039216, g: 1, b: 0.42745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1090,7 +1107,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 228006271}
           m_TargetAssemblyTypeName: Player, Assembly-CSharp
-          m_MethodName: FoodButtonPush
+          m_MethodName: StudyButtonPush
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1498,7 +1515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eat!
+  m_text: Study!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1993,7 +2010,6 @@ GameObject:
   - component: {fileID: 1675090654}
   - component: {fileID: 1675090653}
   - component: {fileID: 1675090652}
-  - component: {fileID: 1675090655}
   m_Layer: 5
   m_Name: StudyBar
   m_TagString: Untagged
@@ -2118,35 +2134,6 @@ RectTransform:
   m_AnchoredPosition: {x: 359, y: 131}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1675090655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675090651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
-          m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-          m_MethodName: ChangeScene
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Sampod2d
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1810308656
 GameObject:
   m_ObjectHideFlags: 0
