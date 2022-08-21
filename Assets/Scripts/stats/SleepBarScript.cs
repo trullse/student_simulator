@@ -6,15 +6,23 @@ using UnityEngine.UI;
 public class SleepBarScript : MonoBehaviour
 {
     public Slider slider;
-
+    public Image image;
+    public Gradient gradient;
     public void SetMaxSleep(float sleep)
     {
-        slider.maxValue = sleep;
+
+        slider.maxValue = 1f;
+
         slider.value = sleep;
+
+        image.color = gradient.Evaluate(sleep);
+        
     }
     public void SetSleep(float sleep)
     {
         slider.value = sleep;
+
+        image.color = gradient.Evaluate(sleep);
     }
 
 }
