@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kitchen2d.unity
     guid: 7c1e7e9fb030769438b61ecdc6a4dc01
+  - enabled: 1
+    path: Assets/Scenes/KitchenFridge2d.unity
+    guid: 4d57e3976e7cced4cac25e23698169af
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 9d8af06b9aab0a946acd69dabea7c379
   m_configObjects: {}
