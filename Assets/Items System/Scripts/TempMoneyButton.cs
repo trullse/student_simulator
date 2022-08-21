@@ -23,7 +23,7 @@ public class TempMoneyButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        money = PlayerPrefs.GetInt("money");
+        //money = PlayerPrefs.GetInt("money");
         moneyText.text = money.ToString();
     }
 }

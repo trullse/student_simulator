@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class Market : MonoBehaviour
 {
-    public int money;
-    public AllItems itemsList;
-
     public Item[] arrayItems;
 
+    public GameObject _playerObj;
+    private Player player;
     public GameObject button;
     public GameObject content;
 
@@ -19,7 +18,8 @@ public class Market : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        money = PlayerPrefs.GetInt("money");
+        //money = PlayerPrefs.GetInt("money");
+        player = _playerObj.GetComponent<Player>();
 
         RectTransform rectT = content.GetComponent<RectTransform>();
         rectT.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
@@ -55,33 +55,18 @@ public class Market : MonoBehaviour
                 //pr.GetComponentInChildren<Text>().text = arrayItems[i].ItemPrice.ToString();
                 pr.GetComponentsInChildren<Image>()[0].sprite = arrayItems[i].ItemImage;
                 var i1 = i;
-                pr.GetComponent<Button>().onClick.AddListener(() => GetGood(i1));
+                pr.GetComponent<Button>().onClick.AddListener(() => GetGood(arrayItems[i1]));
                 list.Add(pr);
             }
         }
     }
 
-    void GetGood(int id)
+    void GetGood(Item item)
     {
-        switch (id)
+        Debug.Log(item.ID);
+        if (player.SpendMoney(item.ItemPrice))
         {
-            case 0:
-                Debug.Log(id);
-                money -= 10;
-
-                PlayerPrefs.SetInt("money", money);
-
-                break;
-            case 1:
-                Debug.Log(id);
-                money -= 20;
-                PlayerPrefs.SetInt("money", money);
-                break;
-            case 2:
-                Debug.Log(id);
-                money -= 50;
-                PlayerPrefs.SetInt("money", money);
-                break;
+            player.IncreaseFood(item.Calories);
         }
     }
 }
