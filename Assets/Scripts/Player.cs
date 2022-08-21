@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    private int money;
+    [SerializeField] private Text moneyText;
+
     public float maxSleep = 1f;
     public float currentSleep;
     private float sleepDecrease = 0.02f;
@@ -28,17 +32,23 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentSleep = maxSleep;
-        sleepBar.SetMaxSleep(maxSleep);
+        money = PlayerPrefs.GetInt("money");
+        if (moneyText != null)
+        {
+            moneyText.text = money.ToString();
+        }
 
-        currentFood = maxFood;
-        foodBar.SetMaxFood(maxFood);
+        currentSleep = (PlayerPrefs.HasKey("sleep")) ? PlayerPrefs.GetFloat("sleep") : 1f;
+        sleepBar.SetSleep(currentSleep);
 
-        currentToilet = maxToilet;
-        toiletBar.SetMaxToilet(maxToilet);
+        currentFood = (PlayerPrefs.HasKey("food")) ? PlayerPrefs.GetFloat("food") : 1f;
+        foodBar.SetFood(currentFood);
 
-        currentStudy = maxStudy;
-        studyBar.SetMaxStudy(maxStudy);
+        currentToilet = (PlayerPrefs.HasKey("toilet")) ? PlayerPrefs.GetFloat("toilet") : 1f;
+        toiletBar.SetToilet(currentToilet);
+
+        currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
+        studyBar.SetStudy(currentStudy);
     }
 
     // Update is called once per frame
@@ -73,8 +83,39 @@ public class Player : MonoBehaviour
             DecreaseStudy(0.1f);
             studyBar.SetStudy(currentStudy);
         }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            DecreaseSleep(0.1f);
+            sleepBar.SetSleep(currentSleep);
+        }
+
     }
 
+    public void GetMoney(int _money)
+    {
+        money += _money;
+        PlayerPrefs.SetInt("money", money);
+        if (moneyText != null)
+        {
+            moneyText.text = money.ToString();
+        }
+    }
+
+    public bool SpendMoney(int _money)
+    {
+        if (money >= _money)
+        {
+            money -= _money;
+            PlayerPrefs.SetInt("money", money);
+            if (moneyText != null)
+            {
+                moneyText.text = money.ToString();
+            }
+            return true;
+        }
+        return false;
+    }
     public void SleepButtonPush()
     {
         IncreaseSleep(0.5f);
@@ -87,14 +128,30 @@ public class Player : MonoBehaviour
         foodBar.SetFood(currentFood);
     }
 
+
+    public void ToiletButtonPush()
+    {
+        IncreaseToilet(0.5f);
+        toiletBar.SetToilet(currentToilet);
+    }
+
+
+    public void StudyButtonPush()
+    {
+        IncreaseStudy(0.5f);
+        studyBar.SetStudy(currentStudy);
+    }
+
     public void IncreaseSleep(float sleep)
     {
-        if (currentSleep < maxSleep)
+        if (currentSleep < 1f)
         {
-            if (maxSleep - currentSleep > sleep)
+            if (1f - currentSleep > sleep)
                 currentSleep += sleep;
-            else currentSleep = maxSleep;
+            else currentSleep = 1f;
         }
+
+        PlayerPrefs.SetFloat("sleep", currentSleep);
     }
 
     void DecreaseSleep(float sleep)
@@ -103,16 +160,20 @@ public class Player : MonoBehaviour
             currentSleep = 0;
         else
             currentSleep -= sleep;
+
+        PlayerPrefs.SetFloat("sleep", currentSleep);
     }
 
     public void IncreaseFood(float food)
     {
-        if (currentFood < maxFood)
+        if (currentFood < 1f)
         {
-            if (maxFood - currentFood > food)
+            if (1f - currentFood > food)
                 currentFood += food;
-            else currentFood = maxFood;
+            else currentFood = 1f;
         }
+
+        PlayerPrefs.SetFloat("food", currentFood);
     }
 
     void DecreaseFood(float food)
@@ -121,6 +182,21 @@ public class Player : MonoBehaviour
             currentFood = 0;
         else
             currentFood -= food;
+
+        PlayerPrefs.SetFloat("food", currentFood);
+    }
+
+
+    public void IncreaseToilet(float toilet)
+    {
+        if (currentToilet < 1f)
+        {
+            if (1f - currentToilet > toilet)
+                currentToilet += toilet;
+            else currentToilet = 1f;
+        }
+
+        PlayerPrefs.SetFloat("toilet", currentToilet);
     }
 
     void DecreaseToilet(float toilet)
@@ -129,6 +205,21 @@ public class Player : MonoBehaviour
             currentToilet = 0;
         else
             currentToilet -= toilet;
+
+        PlayerPrefs.SetFloat("toilet", currentToilet);
+    }
+
+
+    public void IncreaseStudy(float study)
+    {
+        if (currentStudy < 1f)
+        {
+            if (1f - currentStudy > study)
+                currentStudy += study;
+            else currentStudy = 1f;
+        }
+
+        PlayerPrefs.SetFloat("study", currentStudy);
     }
 
     void DecreaseStudy(float study)
@@ -137,5 +228,7 @@ public class Player : MonoBehaviour
             currentStudy = 0;
         else
             currentStudy -= study;
+
+        PlayerPrefs.SetFloat("study", currentStudy);
     }
 }
