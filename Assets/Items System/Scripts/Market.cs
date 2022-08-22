@@ -52,7 +52,7 @@ public class Market : MonoBehaviour
             {
                 var pr = Instantiate(button, transform);
                 pr.GetComponentInChildren<Text>().text = arrayItems[i].ItemName;
-                //pr.GetComponentInChildren<Text>().text = arrayItems[i].ItemPrice.ToString();
+                pr.transform.Find("PriceText").GetComponent<Text>().text = arrayItems[i].ItemPrice.ToString();
                 pr.GetComponentsInChildren<Image>()[0].sprite = arrayItems[i].ItemImage;
                 var i1 = i;
                 pr.GetComponent<Button>().onClick.AddListener(() => GetGood(arrayItems[i1]));
