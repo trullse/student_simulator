@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
         currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
         studyBar.SetStudy(currentStudy);
-        OfflineTime();
+        //OfflineTime();
     }
 
     // Update is called once per frame
