@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 622040514}
   - component: {fileID: 622040513}
   - component: {fileID: 622040512}
+  - component: {fileID: 622040515}
   m_Layer: 5
   m_Name: FridgeButton
   m_TagString: Untagged
@@ -520,7 +521,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
+      - m_Target: {fileID: 622040515}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -570,6 +571,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622040510}
   m_CullTransparentMesh: 1
+--- !u!114 &622040515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622040510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 228006271}
 --- !u!1 &650263594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1251,7 @@ GameObject:
   - component: {fileID: 975335421}
   - component: {fileID: 975335420}
   - component: {fileID: 975335423}
+  - component: {fileID: 975335424}
   m_Layer: 5
   m_Name: fridge
   m_TagString: Untagged
@@ -1364,18 +1379,31 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 228006271}
-          m_TargetAssemblyTypeName: Player, Assembly-CSharp
-          m_MethodName: FoodButtonPush
-          m_Mode: 1
+        - m_Target: {fileID: 975335424}
+          m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_MethodName: set_name
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: kitchenFridge2d
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &975335424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975335418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 228006271}
 --- !u!1 &1000946711
 GameObject:
   m_ObjectHideFlags: 0
