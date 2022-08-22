@@ -59,7 +59,11 @@ public class StudyScript : MonoBehaviour
 
     public void OnStudyBttnClick()
     {
-        isStudying = (isStudying ? false : true);
+        if (isStudying)
+            isStudying = false;
+        else if (currentStudyProgress != 1f)
+            isStudying = true;
+
         player.StudyStatusChange(isStudying);
     }
 
