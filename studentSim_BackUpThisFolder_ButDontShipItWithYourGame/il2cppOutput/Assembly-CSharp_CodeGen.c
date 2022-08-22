@@ -70,73 +70,91 @@ extern void MoneyTextScript_Update_mC29B6056EA9C05B5C51A0684EBB6C1DF93307821 (vo
 extern void MoneyTextScript__ctor_m4C3B155803E290D2B1ACBA32A3B2D630A5E43143 (void);
 // 0x0000001D System.Void Player::Start()
 extern void Player_Start_mC31CF4F40DDEA35C5E39E8C43EC37284AE7C453D (void);
-// 0x0000001E System.Void Player::Update()
+// 0x0000001E System.Void Player::StudyStatusChange(System.Boolean)
+extern void Player_StudyStatusChange_mA3C28B30A7ED3FDCB603914468E6A85C789AFDA4 (void);
+// 0x0000001F System.Void Player::Update()
 extern void Player_Update_m95E134A5EF1B5164EA281F61D7FA436F59BE3C9F (void);
-// 0x0000001F System.Void Player::OfflineTime()
+// 0x00000020 System.Void Player::OfflineTime()
 extern void Player_OfflineTime_mC42400119DFCF5219EC55A960DBABB6D71AD2729 (void);
-// 0x00000020 System.Void Player::OnApplicationPause(System.Boolean)
+// 0x00000021 System.Void Player::OnApplicationPause(System.Boolean)
 extern void Player_OnApplicationPause_m5F7EC3DFC1F3A46147D3A82043437968D6DB0174 (void);
-// 0x00000021 System.Void Player::GetMoney(System.Int32)
+// 0x00000022 System.Void Player::GetMoney(System.Int32)
 extern void Player_GetMoney_mF0893C98E012AA13A149251EDA5BCB2E48CA637B (void);
-// 0x00000022 System.Boolean Player::SpendMoney(System.Int32)
+// 0x00000023 System.Boolean Player::SpendMoney(System.Int32)
 extern void Player_SpendMoney_m8CBB6F6E791393EE765C26B5C796222834BD2583 (void);
-// 0x00000023 System.Void Player::SleepButtonPush()
+// 0x00000024 System.Void Player::SleepButtonPush()
 extern void Player_SleepButtonPush_mDAA90E3CF9C71971259D983BC54E08E2D59F5823 (void);
-// 0x00000024 System.Void Player::FoodButtonPush()
+// 0x00000025 System.Void Player::FoodButtonPush()
 extern void Player_FoodButtonPush_m5B4A5ABF5AC9A46E9F083DA7FF382E4183338884 (void);
-// 0x00000025 System.Void Player::ToiletButtonPush()
+// 0x00000026 System.Void Player::ToiletButtonPush()
 extern void Player_ToiletButtonPush_m8928B55C7E60CCD30E5984A6A5B98B0BECEAE0F0 (void);
-// 0x00000026 System.Void Player::StudyButtonPush()
+// 0x00000027 System.Void Player::StudyButtonPush()
 extern void Player_StudyButtonPush_m48C8D8F1F73EE061A6E8DFB514AB6592C395CAEE (void);
-// 0x00000027 System.Void Player::IncreaseSleep(System.Single)
+// 0x00000028 System.Void Player::IncreaseSleep(System.Single)
 extern void Player_IncreaseSleep_m61BF91969B0A671F0F312233D376669BFDED8B8B (void);
-// 0x00000028 System.Void Player::DecreaseSleep(System.Single)
+// 0x00000029 System.Void Player::DecreaseSleep(System.Single)
 extern void Player_DecreaseSleep_mB30E1298AC32ADC2EB6F07064E6C093E89EFC247 (void);
-// 0x00000029 System.Void Player::IncreaseFood(System.Single)
+// 0x0000002A System.Void Player::IncreaseFood(System.Single)
 extern void Player_IncreaseFood_m175D24C58D3F5251A7A4D07D1BC3108433F62615 (void);
-// 0x0000002A System.Void Player::DecreaseFood(System.Single)
+// 0x0000002B System.Void Player::DecreaseFood(System.Single)
 extern void Player_DecreaseFood_mAB701D80F87EA21370E4056C9D33286C3C48ADE2 (void);
-// 0x0000002B System.Void Player::IncreaseToilet(System.Single)
+// 0x0000002C System.Void Player::IncreaseToilet(System.Single)
 extern void Player_IncreaseToilet_mEF10418FB39A65311DA95EB19D4B433287F41E70 (void);
-// 0x0000002C System.Void Player::DecreaseToilet(System.Single)
+// 0x0000002D System.Void Player::DecreaseToilet(System.Single)
 extern void Player_DecreaseToilet_m94AADA5F808742CA216E5A4D074E54A6C536F6DA (void);
-// 0x0000002D System.Void Player::IncreaseStudy(System.Single)
+// 0x0000002E System.Void Player::IncreaseStudy(System.Single)
 extern void Player_IncreaseStudy_m022EF6DF42E07597B885BAC45FB286E4F8F48F5B (void);
-// 0x0000002E System.Void Player::DecreaseStudy(System.Single)
+// 0x0000002F System.Void Player::DecreaseStudy(System.Single)
 extern void Player_DecreaseStudy_m945A741F6AF697559E9ACBC36E9AAA6CC1641B26 (void);
-// 0x0000002F System.Void Player::.ctor()
+// 0x00000030 System.Void Player::.ctor()
 extern void Player__ctor_m0A83E0706592FC871B0CF188B37AFC6649F3D85D (void);
-// 0x00000030 System.Void Save::.ctor()
+// 0x00000031 System.Void Save::.ctor()
 extern void Save__ctor_m7F3B81D9CECE1B025AAA41AA4D9C675D5B6C1A89 (void);
-// 0x00000031 System.Void SaveScript::Start()
+// 0x00000032 System.Void SaveScript::Start()
 extern void SaveScript_Start_m09B8F92B08F043F34F542ED3871E74A516F29899 (void);
-// 0x00000032 System.Void SaveScript::SaveData()
+// 0x00000033 System.Void SaveScript::SaveData()
 extern void SaveScript_SaveData_m18C7A63132D5F8E8B6F8B11873DAA3D35DD1C728 (void);
-// 0x00000033 System.Void SaveScript::LoadData()
+// 0x00000034 System.Void SaveScript::LoadData()
 extern void SaveScript_LoadData_m6B867C705B00139F4013802DEB49C4823E3AD91B (void);
-// 0x00000034 System.Void SaveScript::.ctor()
+// 0x00000035 System.Void SaveScript::.ctor()
 extern void SaveScript__ctor_mC167E10172D71949D549E6B7D569F83A5CF951C9 (void);
-// 0x00000035 System.Void SceneChange::ChangeScene(System.String)
+// 0x00000036 System.Void SceneChange::ChangeScene(System.String)
 extern void SceneChange_ChangeScene_mB15E7A40CAC031E600BCDBA3D6652684EFD17269 (void);
-// 0x00000036 System.Void SceneChange::.ctor()
+// 0x00000037 System.Void SceneChange::.ctor()
 extern void SceneChange__ctor_m4BEE4E939472EAB59441D14F2324EEE353793A1B (void);
-// 0x00000037 System.Void FoodBarScript::SetFood(System.Single)
+// 0x00000038 System.Void FoodBarScript::SetFood(System.Single)
 extern void FoodBarScript_SetFood_m14EC2559C761867E5AD8E001108C4160F50B6368 (void);
-// 0x00000038 System.Void FoodBarScript::.ctor()
+// 0x00000039 System.Void FoodBarScript::.ctor()
 extern void FoodBarScript__ctor_m26F5BD2048A114E969461C4186FEC5BE9F90BE80 (void);
-// 0x00000039 System.Void SleepBarScript::SetSleep(System.Single)
+// 0x0000003A System.Void SleepBarScript::SetSleep(System.Single)
 extern void SleepBarScript_SetSleep_m3855169814068403BB2AF635F8757FC1615D7257 (void);
-// 0x0000003A System.Void SleepBarScript::.ctor()
+// 0x0000003B System.Void SleepBarScript::.ctor()
 extern void SleepBarScript__ctor_m70FDFBED34313E48CD56B6D726622058C80F5D1C (void);
-// 0x0000003B System.Void StudyBarScript::SetStudy(System.Single)
+// 0x0000003C System.Void StudyBarScript::SetStudy(System.Single)
 extern void StudyBarScript_SetStudy_m7ED449C3FF243297D71CA9BC510B79564485E2F3 (void);
-// 0x0000003C System.Void StudyBarScript::.ctor()
+// 0x0000003D System.Void StudyBarScript::.ctor()
 extern void StudyBarScript__ctor_m7F69CC970FC62EBED42812019FF84F1197E4E1F8 (void);
-// 0x0000003D System.Void ToiletBarScript::SetToilet(System.Single)
+// 0x0000003E System.Void ToiletBarScript::SetToilet(System.Single)
 extern void ToiletBarScript_SetToilet_m3BD1DD46D9F102FF945FD3B2EE506720294A6308 (void);
-// 0x0000003E System.Void ToiletBarScript::.ctor()
+// 0x0000003F System.Void ToiletBarScript::.ctor()
 extern void ToiletBarScript__ctor_m5A68290D048B79E8F9126F4551FCA4C3C84C70AE (void);
-static Il2CppMethodPointer s_methodPointers[62] = 
+// 0x00000040 System.Void StudyProgressBar::SetStudyProgress(System.Single)
+extern void StudyProgressBar_SetStudyProgress_m95619D151DD0F7AF7567D0E91E54040D6ABF9571 (void);
+// 0x00000041 System.Void StudyProgressBar::.ctor()
+extern void StudyProgressBar__ctor_mDD94803430AB1C6BFF783900D9812A607529CADA (void);
+// 0x00000042 System.Void StudyScript::Start()
+extern void StudyScript_Start_mDC0E1CF3CB22A497912C062813C1A24B1E2B88B1 (void);
+// 0x00000043 System.Void StudyScript::Update()
+extern void StudyScript_Update_m807994B80632C942DFAF34C967F85874BC4E6FC5 (void);
+// 0x00000044 System.Void StudyScript::IncreaseStudyProgress(System.Single)
+extern void StudyScript_IncreaseStudyProgress_mF839D4E3FF72FE887EE960C6E596A7919E00C845 (void);
+// 0x00000045 System.Void StudyScript::OnStudyBttnClick()
+extern void StudyScript_OnStudyBttnClick_m8FCB189A51377C44B6BB5C8CC90131D94D4F3EFF (void);
+// 0x00000046 System.Void StudyScript::OnDefendBttnClick()
+extern void StudyScript_OnDefendBttnClick_mD651217413B33AFAE00F41F4634DC97D78B4D81C (void);
+// 0x00000047 System.Void StudyScript::.ctor()
+extern void StudyScript__ctor_mB7BC76079832E269CBC884DE065DF082BCD73DB5 (void);
+static Il2CppMethodPointer s_methodPointers[71] = 
 {
 	AllItems__ctor_mAC04443D024662AE36564D5B1BD632D91A1BC81A,
 	CharacterItems_Start_m388C8AA62C60F0634995B653B686DAF65CA94BBD,
@@ -167,6 +185,7 @@ static Il2CppMethodPointer s_methodPointers[62] =
 	MoneyTextScript_Update_mC29B6056EA9C05B5C51A0684EBB6C1DF93307821,
 	MoneyTextScript__ctor_m4C3B155803E290D2B1ACBA32A3B2D630A5E43143,
 	Player_Start_mC31CF4F40DDEA35C5E39E8C43EC37284AE7C453D,
+	Player_StudyStatusChange_mA3C28B30A7ED3FDCB603914468E6A85C789AFDA4,
 	Player_Update_m95E134A5EF1B5164EA281F61D7FA436F59BE3C9F,
 	Player_OfflineTime_mC42400119DFCF5219EC55A960DBABB6D71AD2729,
 	Player_OnApplicationPause_m5F7EC3DFC1F3A46147D3A82043437968D6DB0174,
@@ -200,8 +219,16 @@ static Il2CppMethodPointer s_methodPointers[62] =
 	StudyBarScript__ctor_m7F69CC970FC62EBED42812019FF84F1197E4E1F8,
 	ToiletBarScript_SetToilet_m3BD1DD46D9F102FF945FD3B2EE506720294A6308,
 	ToiletBarScript__ctor_m5A68290D048B79E8F9126F4551FCA4C3C84C70AE,
+	StudyProgressBar_SetStudyProgress_m95619D151DD0F7AF7567D0E91E54040D6ABF9571,
+	StudyProgressBar__ctor_mDD94803430AB1C6BFF783900D9812A607529CADA,
+	StudyScript_Start_mDC0E1CF3CB22A497912C062813C1A24B1E2B88B1,
+	StudyScript_Update_m807994B80632C942DFAF34C967F85874BC4E6FC5,
+	StudyScript_IncreaseStudyProgress_mF839D4E3FF72FE887EE960C6E596A7919E00C845,
+	StudyScript_OnStudyBttnClick_m8FCB189A51377C44B6BB5C8CC90131D94D4F3EFF,
+	StudyScript_OnDefendBttnClick_mD651217413B33AFAE00F41F4634DC97D78B4D81C,
+	StudyScript__ctor_mB7BC76079832E269CBC884DE065DF082BCD73DB5,
 };
-static const int32_t s_InvokerIndices[62] = 
+static const int32_t s_InvokerIndices[71] = 
 {
 	3428,
 	3428,
@@ -232,6 +259,7 @@ static const int32_t s_InvokerIndices[62] =
 	3428,
 	3428,
 	3428,
+	2732,
 	3428,
 	3428,
 	2732,
@@ -265,12 +293,20 @@ static const int32_t s_InvokerIndices[62] =
 	3428,
 	2824,
 	3428,
+	2824,
+	3428,
+	3428,
+	3428,
+	2824,
+	3428,
+	3428,
+	3428,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	62,
+	71,
 	s_methodPointers,
 	0,
 	NULL,
