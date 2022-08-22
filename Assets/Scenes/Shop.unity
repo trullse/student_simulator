@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 46140743}
   - component: {fileID: 46140742}
   - component: {fileID: 46140741}
+  - component: {fileID: 46140744}
   m_Layer: 5
   m_Name: ToiletBar
   m_TagString: Untagged
@@ -182,7 +183,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
+        - m_Target: {fileID: 46140744}
           m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
           m_MethodName: ChangeScene
           m_Mode: 5
@@ -288,6 +289,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &46140744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46140739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 228006271}
 --- !u!1 &138629038
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +390,7 @@ GameObject:
   - component: {fileID: 145474177}
   - component: {fileID: 145474176}
   - component: {fileID: 145474175}
+  - component: {fileID: 145474178}
   m_Layer: 5
   m_Name: FoodBar
   m_TagString: Untagged
@@ -423,7 +438,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
+        - m_Target: {fileID: 145474178}
           m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
           m_MethodName: ChangeScene
           m_Mode: 5
@@ -529,6 +544,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &145474178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145474173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 228006271}
 --- !u!1 &176385147
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +675,7 @@ MonoBehaviour:
   foodBar: {fileID: 145474176}
   toiletBar: {fileID: 46140742}
   studyBar: {fileID: 2101581271}
+  isBusy: 0
 --- !u!4 &228006272
 Transform:
   m_ObjectHideFlags: 0
@@ -958,7 +987,7 @@ GameObject:
   - component: {fileID: 429056911}
   - component: {fileID: 429056910}
   - component: {fileID: 429056909}
-  - component: {fileID: 429056908}
+  - component: {fileID: 429056912}
   m_Layer: 5
   m_Name: SleepBar
   m_TagString: Untagged
@@ -989,18 +1018,6 @@ RectTransform:
   m_AnchoredPosition: {x: -600, y: 272}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &429056908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429056906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &429056909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1035,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
+        - m_Target: {fileID: 429056912}
           m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
           m_MethodName: ChangeScene
           m_Mode: 5
@@ -1124,6 +1141,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &429056912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429056906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 228006271}
 --- !u!1 &439584307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3188,7 @@ GameObject:
   - component: {fileID: 2101581272}
   - component: {fileID: 2101581271}
   - component: {fileID: 2101581270}
+  - component: {fileID: 2101581273}
   m_Layer: 5
   m_Name: StudyBar
   m_TagString: Untagged
@@ -3205,7 +3236,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7775767185764283038, guid: 70b088e208ea6a54d96fa26d142cda20, type: 3}
+        - m_Target: {fileID: 2101581273}
           m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
           m_MethodName: ChangeScene
           m_Mode: 5
@@ -3311,3 +3342,16 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2101581273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101581268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3b2e7d3af60b44aa08e6f314b4b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 228006271}
