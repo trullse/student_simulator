@@ -30,9 +30,13 @@ public class Player : MonoBehaviour
     public ToiletBarScript toiletBar;
     public StudyBarScript studyBar;
 
+    public bool isBusy;
+
+
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         money = PlayerPrefs.GetInt("money");
         if (moneyText != null)
         {
@@ -51,6 +55,29 @@ public class Player : MonoBehaviour
         currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
         studyBar.SetStudy(currentStudy);
         OfflineTime();
+=======
+        isBusy = false;
+
+
+        money = PlayerPrefs.GetInt("money");
+        if (moneyText != null)
+        {
+            moneyText.text = money.ToString();
+        }
+
+        currentSleep = (PlayerPrefs.HasKey("sleep")) ? PlayerPrefs.GetFloat("sleep") : 1f;
+        sleepBar.SetSleep(currentSleep);
+
+        currentFood = (PlayerPrefs.HasKey("food")) ? PlayerPrefs.GetFloat("food") : 1f;
+        foodBar.SetFood(currentFood);
+
+        currentToilet = (PlayerPrefs.HasKey("toilet")) ? PlayerPrefs.GetFloat("toilet") : 1f;
+        toiletBar.SetToilet(currentToilet);
+
+        currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
+        studyBar.SetStudy(currentStudy);
+        //OfflineTime();
+>>>>>>> remotes/origin/Veronika
     }
 
     // Update is called once per frame
