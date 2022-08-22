@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -29,9 +30,13 @@ public class Player : MonoBehaviour
     public ToiletBarScript toiletBar;
     public StudyBarScript studyBar;
 
+    public bool isBusy;
+
+
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         money = PlayerPrefs.GetInt("money");
         if (moneyText != null)
         {
@@ -49,6 +54,30 @@ public class Player : MonoBehaviour
 
         currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
         studyBar.SetStudy(currentStudy);
+        OfflineTime();
+=======
+        isBusy = false;
+
+
+        money = PlayerPrefs.GetInt("money");
+        if (moneyText != null)
+        {
+            moneyText.text = money.ToString();
+        }
+
+        currentSleep = (PlayerPrefs.HasKey("sleep")) ? PlayerPrefs.GetFloat("sleep") : 1f;
+        sleepBar.SetSleep(currentSleep);
+
+        currentFood = (PlayerPrefs.HasKey("food")) ? PlayerPrefs.GetFloat("food") : 1f;
+        foodBar.SetFood(currentFood);
+
+        currentToilet = (PlayerPrefs.HasKey("toilet")) ? PlayerPrefs.GetFloat("toilet") : 1f;
+        toiletBar.SetToilet(currentToilet);
+
+        currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
+        studyBar.SetStudy(currentStudy);
+        //OfflineTime();
+>>>>>>> remotes/origin/Veronika
     }
 
     // Update is called once per frame
@@ -89,9 +118,44 @@ public class Player : MonoBehaviour
             DecreaseSleep(0.1f);
             sleepBar.SetSleep(currentSleep);
         }
-
     }
 
+    private void OfflineTime()
+    {
+        TimeSpan timeSpan;
+        if (PlayerPrefs.HasKey("LastSession"))
+        {
+            timeSpan = DateTime.Now - DateTime.Parse(PlayerPrefs.GetString("LastSession"));
+            DecreaseSleep(sleepDecrease * (float)timeSpan.TotalSeconds);
+            sleepBar.SetSleep(currentSleep);
+
+            DecreaseFood(foodDecrease * (float)timeSpan.TotalSeconds);
+            foodBar.SetFood(currentFood);
+
+            DecreaseToilet(toiletDecrease * (float)timeSpan.TotalSeconds);
+            toiletBar.SetToilet(currentToilet);
+
+            DecreaseStudy(studyDecrease * (float)timeSpan.TotalSeconds);
+            studyBar.SetStudy(currentStudy);
+        }
+    }
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+        }
+    }
+
+#else
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+    }
+
+#endif
     public void GetMoney(int _money)
     {
         money += _money;
