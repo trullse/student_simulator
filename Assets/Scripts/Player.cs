@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public float maxStudy = 1f;
     public float currentStudy;
     private float studyDecrease = 0.02f;
+    private bool isStudying = false;
 
     public SleepBarScript sleepBar;
     public FoodBarScript foodBar;
@@ -53,6 +54,10 @@ public class Player : MonoBehaviour
         //OfflineTime();
     }
 
+    public void StudyStatusChange(bool toStudy)
+    {
+        isStudying = toStudy;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -65,7 +70,8 @@ public class Player : MonoBehaviour
         DecreaseToilet(toiletDecrease * Time.deltaTime);
         toiletBar.SetToilet(currentToilet);
 
-        DecreaseStudy(studyDecrease * Time.deltaTime);
+        if (!isStudying)
+            DecreaseStudy(studyDecrease * Time.deltaTime);
         studyBar.SetStudy(currentStudy);
 
         if (Input.GetKeyDown(KeyCode.F))
