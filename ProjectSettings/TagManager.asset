@@ -6,6 +6,10 @@ TagManager:
   tags:
   - stats
   - back
+  - Bird
+  - fallingBody
+  - ground
+  - specialLine
   layers:
   - Default
   - TransparentFX
