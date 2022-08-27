@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float maxToilet = 1f;
     public float currentToilet;
     private float toiletDecrease = 0.02f;
+    private bool isUsingToilet;
 
     public float maxStudy = 1f;
     public float currentStudy;
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour
 
         isStudying = false;
         isSleeping = false;
+        isUsingToilet = false;
 
         money = PlayerPrefs.GetInt("money");
         if (moneyText != null)
@@ -73,6 +75,11 @@ public class Player : MonoBehaviour
         isSleeping = toSleep;
     }
 
+    public void ToiletStatusChange(bool toUse)
+    {
+        isUsingToilet = toUse;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -83,7 +90,8 @@ public class Player : MonoBehaviour
         DecreaseFood(foodDecrease * Time.deltaTime);
         foodBar.SetFood(currentFood);
 
-        DecreaseToilet(toiletDecrease * Time.deltaTime);
+        if (!isUsingToilet)
+            DecreaseToilet(toiletDecrease * Time.deltaTime);
         toiletBar.SetToilet(currentToilet);
 
         if (!isStudying)
