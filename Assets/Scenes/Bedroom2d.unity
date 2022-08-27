@@ -609,6 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228006272}
   - component: {fileID: 228006271}
+  - component: {fileID: 228006274}
   - component: {fileID: 228006273}
   m_Layer: 0
   m_Name: Player
@@ -670,6 +671,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647d2e1edf61c65499fd55a62f394832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &228006274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228006270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54efc724b725b354ba2e60792796fa96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 228006270}
+  base_texture: {fileID: 1897084294}
+  lights: {fileID: 1607718992}
+  neighboor: {fileID: 865935429}
 --- !u!1 &505975714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,8 +1629,6 @@ GameObject:
   - component: {fileID: 975335422}
   - component: {fileID: 975335421}
   - component: {fileID: 975335420}
-  - component: {fileID: 975335423}
-  - component: {fileID: 975335424}
   m_Layer: 5
   m_Name: bed
   m_TagString: Untagged
@@ -1684,7 +1699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975335421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228006274}
+        m_TargetAssemblyTypeName: SleepScript, Assembly-CSharp
+        m_MethodName: OnSleepBttnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &975335421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,50 +1750,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975335418}
   m_CullTransparentMesh: 1
---- !u!114 &975335423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975335418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 975335424}
-          m_TargetAssemblyTypeName: goSleepScript, Assembly-CSharp
-          m_MethodName: goSleep
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &975335424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975335418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da40073ff27c3f47b198d3c77110a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  base_texture: {fileID: 1897084294}
-  light: {fileID: 1607718992}
-  player: {fileID: 228006271}
 --- !u!1 &1000946711
 GameObject:
   m_ObjectHideFlags: 0

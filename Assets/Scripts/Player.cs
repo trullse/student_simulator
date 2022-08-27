@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float maxSleep = 1f;
     public float currentSleep;
     private float sleepDecrease = 0.02f;
+    private bool isSleeping;
 
     public float maxFood = 1f;
     public float currentFood;
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour
     public float maxStudy = 1f;
     public float currentStudy;
     private float studyDecrease = 0.02f;
-    private bool isStudying = false;
+    private bool isStudying;
 
     public SleepBarScript sleepBar;
     public FoodBarScript foodBar;
@@ -38,6 +39,9 @@ public class Player : MonoBehaviour
     {
 
         isBusy = false;
+
+        isStudying = false;
+        isSleeping = false;
 
         money = PlayerPrefs.GetInt("money");
         if (moneyText != null)
@@ -63,10 +67,17 @@ public class Player : MonoBehaviour
     {
         isStudying = toStudy;
     }
+
+    public void SleepStatusChange(bool toSleep)
+    {
+        isSleeping = toSleep;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        DecreaseSleep(sleepDecrease * Time.deltaTime);
+        if (!isSleeping)
+            DecreaseSleep(sleepDecrease * Time.deltaTime);
         sleepBar.SetSleep(currentSleep);
 
         DecreaseFood(foodDecrease * Time.deltaTime);
