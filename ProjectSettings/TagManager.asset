@@ -50,3 +50,9 @@ TagManager:
   - name: neighboor
     uniqueID: 1460371779
     locked: 0
+  - name: character
+    uniqueID: 4149494795
+    locked: 0
+  - name: front_effects
+    uniqueID: 897393085
+    locked: 0
