@@ -9,14 +9,6 @@ public class PlayerControl : MonoBehaviour
     private Vector2 startPosition = Vector2.zero;
     private float dragDirection = 0f;
 
-    [SerializeField] private int lives = 3;
-    public static bool tap, leftButton, rightButton;
-    private bool isDraging = false;
-    private Vector2 startTouch, swipeDelta;
-    float horizontalMove = 0f;
-    public float speed = 3f;
-
-
     // Update is called once per frame
     private void Update()
     {
