@@ -567,6 +567,7 @@ UnityEngine.PlayerPrefs::TrySetSetString
 UnityEngine.PlayerPrefs::GetInt
 UnityEngine.PlayerPrefs::GetFloat
 UnityEngine.PlayerPrefs::GetString
+UnityEngine.PlayerPrefs::DeleteKey
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_activeColorSpace
 UnityEngine.Quaternion::AngleAxis_Injected
@@ -634,6 +635,7 @@ UnityEngine.RenderTexture::GetTemporary_Internal_Injected
 UnityEngine.Resources::GetBuiltinResource
 UnityEngine.ResourcesAPIInternal::Load
 UnityEngine.ResourcesAPIInternal::FindShaderByName
+UnityEngine.Rigidbody2D::MovePosition_Injected
 UnityEngine.Rigidbody2D::get_position_Injected
 UnityEngine.Rigidbody2D::get_velocity_Injected
 UnityEngine.Rigidbody2D::set_constraints
@@ -730,6 +732,7 @@ UnityEngine.Texture2DArray::get_isReadable
 UnityEngine.Texture3D::Internal_CreateImpl
 UnityEngine.Texture3D::get_isReadable
 UnityEngine.Time::get_deltaTime
+UnityEngine.Time::get_fixedDeltaTime
 UnityEngine.Time::get_realtimeSinceStartup
 UnityEngine.Time::get_unscaledDeltaTime
 UnityEngine.Time::get_unscaledTime
