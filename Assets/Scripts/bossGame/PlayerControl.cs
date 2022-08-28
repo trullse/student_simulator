@@ -1,18 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static event Action<float> OnMove;
+    private Vector2 startPosition = Vector2.zero;
+    private float dragDirection = 0f;
+
+    [SerializeField] private int lives = 3;
+    public static bool tap, leftButton, rightButton;
+    private bool isDraging = false;
+    private Vector2 startTouch, swipeDelta;
+    float horizontalMove = 0f;
+    public float speed = 3f;
+
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+#if UNITY_EDITOR
+        OnMove?.Invoke(Input.GetAxis("Horizontal"));
+#endif
+#if UNITY_ANDROID
+        GetTouchInput();
+#endif
+    }
+
+    private void GetTouchInput()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Moved:
+                    dragDirection = touch.position.x > startPosition.x ? 1f : -1f;
+                    break;
+                default:
+                    startPosition = touch.position;
+                    dragDirection = 0f;
+                    break;
+            }
+
+            OnMove?.Invoke(dragDirection);
+        }
     }
 }
