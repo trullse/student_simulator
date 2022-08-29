@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6d1a98adcaeda04089b5cd5c2b3d524, type: 3}
-  m_Name: first
+  m_Name: "\u0410\u0442\u043E\u043C"
   m_EditorClassIdentifier: 
-  StickerName: first
-  ID: 0
-  StickerImage: {fileID: 21300000, guid: 88b193459aa8c8242a5519c8bb65b6fa, type: 3}
-  StickerPrice: 50
+  StickerName: "\u0410\u0442\u043E\u043C"
+  ID: 1
+  StickerImage: {fileID: 21300000, guid: 5a16f5a58802c184f9e917c0af7dee20, type: 3}
+  StickerPrice: 100

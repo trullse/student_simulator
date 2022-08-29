@@ -3099,9 +3099,7 @@ MonoBehaviour:
   okBttn: {fileID: 406935830}
   source: {fileID: 202554689}
   toPlace: {fileID: 0}
-  allStickers:
-  - {fileID: 11400000, guid: 2aa48f252c576ab40830c3c3e26c9a02, type: 2}
-  - {fileID: 11400000, guid: 47bf81f221274024daff22818c4f40c6, type: 2}
+  allSticks: {fileID: 6250976777927972701, guid: 5cde09bc7aab9b94eacbe34723d354a9, type: 3}
 --- !u!1 &1665976779
 GameObject:
   m_ObjectHideFlags: 0

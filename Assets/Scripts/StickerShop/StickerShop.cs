@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StickerShop : MonoBehaviour
 {
-    public Sticker[] arrayStickers;
+    public AllStickers allSticks;
 
     public GameObject _playerObj;
     private Player player;
@@ -42,21 +42,25 @@ public class StickerShop : MonoBehaviour
         RectTransform rectT = content.GetComponent<RectTransform>();
         rectT.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         RemoveList();
-        if (arrayStickers.Length > 0)
+        if (allSticks.allStickers.Length > 0)
         {
             var pr1 = Instantiate(button, transform);
             var h = pr1.GetComponent<RectTransform>().rect.height;
             var tr = GetComponent<RectTransform>();
-            tr.sizeDelta = new Vector2(tr.rect.width, h * arrayStickers.Length);
+            tr.sizeDelta = new Vector2(tr.rect.width, h * allSticks.allStickers.Length);
             Destroy(pr1);
-            for (var i = 0; i < arrayStickers.Length; i++)
+            for (var i = 0; i < allSticks.allStickers.Length; i++)
             {
                 var pr = Instantiate(button, transform);
-                pr.GetComponentInChildren<Text>().text = arrayStickers[i].StickerName;
-                pr.transform.Find("PriceText").GetComponent<Text>().text = arrayStickers[i].StickerPrice.ToString();
-                pr.GetComponentsInChildren<Image>()[0].sprite = arrayStickers[i].StickerImage;
+                pr.GetComponentInChildren<Text>().text = allSticks.allStickers[i].StickerName;
+                pr.transform.Find("PriceText").GetComponent<Text>().text = allSticks.allStickers[i].StickerPrice.ToString();
+                pr.GetComponentsInChildren<Image>()[0].sprite = allSticks.allStickers[i].StickerImage;
                 var i1 = i;
-                pr.GetComponent<Button>().onClick.AddListener(() => GetSticker(arrayStickers[i1], pr.GetComponent<Button>()));
+                pr.GetComponent<Button>().onClick.AddListener(() => GetSticker(allSticks.allStickers[i1], pr.GetComponent<Button>()));
+                if (PlayerPrefs.HasKey("StickerBought" + allSticks.allStickers[i].ID) && PlayerPrefs.GetInt("StickerBought" + allSticks.allStickers[i].ID) == 1)
+                {
+                    pr.GetComponent<Button>().interactable = false;
+                }
                 list.Add(pr);
             }
         }
@@ -69,8 +73,8 @@ public class StickerShop : MonoBehaviour
         {
             PlayerPrefs.SetInt("stickerToPlace", sticker.ID);
             bttn.interactable = false;
+            PlayerPrefs.SetInt("StickerBought" + sticker.ID, 1);
             SceneManager.LoadScene("PlaceStickers");
-            //player.IncreaseFood(sticker.Calories);
         }
     }
 }

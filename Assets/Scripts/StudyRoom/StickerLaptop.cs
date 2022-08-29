@@ -19,11 +19,11 @@ public class StickerLaptop : MonoBehaviour
         if (PlayerPrefs.HasKey("sticker" + PlaceID))
         {
             int tempID = PlayerPrefs.GetInt("sticker" + PlaceID);
-            for (int i = 0; i < laptop.allStickers.Length; i++)
+            for (int i = 0; i < laptop.allSticks.allStickers.Length; i++)
             {
-                if (laptop.allStickers[i].ID == tempID)
+                if (laptop.allSticks.allStickers[i].ID == tempID)
                 {
-                    img.GetComponent<Image>().sprite = laptop.allStickers[i].StickerImage;
+                    img.GetComponent<Image>().sprite = laptop.allSticks.allStickers[i].StickerImage;
                 }
             }
         }

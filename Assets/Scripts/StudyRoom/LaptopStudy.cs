@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class LaptopStudy : MonoBehaviour
 {
-    public Sticker[] allStickers;
+    //public Sticker[] allStickers;
+    public AllStickers allSticks;
 }

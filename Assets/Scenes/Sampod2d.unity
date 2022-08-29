@@ -2195,9 +2195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e62240285377c4e8a0f81984f0b16a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allStickers:
-  - {fileID: 11400000, guid: 2aa48f252c576ab40830c3c3e26c9a02, type: 2}
-  - {fileID: 11400000, guid: 47bf81f221274024daff22818c4f40c6, type: 2}
+  allSticks: {fileID: 6250976777927972701, guid: 5cde09bc7aab9b94eacbe34723d354a9, type: 3}
 --- !u!1 &1000946711
 GameObject:
   m_ObjectHideFlags: 0
