@@ -12,6 +12,9 @@ public class PlayerMove : MonoBehaviour
     private float distanceX = 0f;
     private float speed = 5f;
     [SerializeField] int lives = 3;
+    [SerializeField] int timeToSurvive = 60;
+    private bool isDead = false;
+    private int money;
 
     private Vector3 screenLeft, screenRight;
 
@@ -19,6 +22,15 @@ public class PlayerMove : MonoBehaviour
     {
         screenLeft = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         screenRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+        money = PlayerPrefs.GetInt("money");
+        StartCoroutine(WinGame());
+    }
+
+    IEnumerator WinGame()
+    {
+        yield return new WaitForSeconds(timeToSurvive);
+        
+        SceneResult();
     }
 
     private void Move(float _distanceX)
@@ -54,22 +66,38 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
-        --lives;
-        if (lives == 0)
+        if (other.gameObject.tag == "coin")
         {
-            //вызов анимации смерти, если такая будет
-
-            onSceneEnd?.Invoke();
-            //StartCoroutine(EndWait());
-            
+            Destroy(other.gameObject);
+            ++money;
         }
+        else if (other.gameObject.tag == "enemy")
+        {
+            Destroy(other.gameObject);
+            --lives;
+            if (lives == 0)
+            {
+                isDead = true;
+                //вызов анимации смерти, если такая будет
+
+                SceneResult();
+            }
+        }        
     }
 
-    IEnumerator EndWait()
+    private void SceneResult()
+    {
+        onSceneEnd?.Invoke();
+        string sceneName = isDead ? "LabFailed" : "LabPassed";
+        money += 40;
+        PlayerPrefs.SetInt("money", money);
+        StartCoroutine(EndWait(sceneName));
+    }
+
+    IEnumerator EndWait(string sceneName)
     {
         yield return new WaitForSeconds(1);
         
-        SceneManager.LoadScene("LabFailed");
+        SceneManager.LoadScene(sceneName);
     }
 }

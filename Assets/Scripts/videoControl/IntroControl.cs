@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class IntroControl : MonoBehaviour
 {
     public int waiting;
+    public string sceneName;
 
     void Start()
     {
@@ -15,6 +16,6 @@ public class IntroControl : MonoBehaviour
     IEnumerator IntroWait()
     {
         yield return new WaitForSeconds(waiting);
-        SceneManager.LoadScene("VadimGame");
+        SceneManager.LoadScene(sceneName);
     }
 }

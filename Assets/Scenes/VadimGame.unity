@@ -363,6 +363,7 @@ MonoBehaviour:
   copyPosition: {fileID: 593601141}
   range: {x: 2, y: 0}
   enemy: {fileID: 6589889066641974515, guid: 6e1b327915d3be648badaaa2e5979309, type: 3}
+  coins: {fileID: 6589889066641974515, guid: cff07f2db03a0f647945ee652aed1af2, type: 3}
   waiting: 2
 --- !u!212 &593601140
 SpriteRenderer:
@@ -1090,9 +1091,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 897393085
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: 1692543081
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -1280,9 +1281,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -145472501
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 1692543081
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1334,6 +1335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  timeToSurvive: 60
 --- !u!1 &2092179040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,9 +1459,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -145472501
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 1692543081
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6eb8239c9c4cb7a448a6332efcb2ebd2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

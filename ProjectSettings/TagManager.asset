@@ -10,6 +10,8 @@ TagManager:
   - fallingBody
   - ground
   - specialLine
+  - coin
+  - enemy
   layers:
   - Default
   - TransparentFX

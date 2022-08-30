@@ -25,9 +25,6 @@ public class BossIntroControl : MonoBehaviour
 
     void Fading()
     {
-        Debug.Log("Animation worked");
         animator.SetTrigger("SceneEnd");
     }
-
-
 }
