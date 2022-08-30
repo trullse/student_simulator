@@ -363,6 +363,7 @@ MonoBehaviour:
   copyPosition: {fileID: 593601141}
   range: {x: 2, y: 0}
   enemy: {fileID: 6589889066641974515, guid: 6e1b327915d3be648badaaa2e5979309, type: 3}
+  coins: {fileID: 6589889066641974515, guid: cff07f2db03a0f647945ee652aed1af2, type: 3}
   waiting: 2
 --- !u!212 &593601140
 SpriteRenderer:
@@ -1334,6 +1335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  timeToSurvive: 60
 --- !u!1 &2092179040
 GameObject:
   m_ObjectHideFlags: 0
