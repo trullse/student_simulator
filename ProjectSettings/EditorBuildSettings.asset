@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Bedroom2d.unity
     guid: 79a559827ae1f8d4d98d718d7c18836d
@@ -41,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlaceStickers.unity
     guid: 561cae6bb3b8c0d40a6e8610b1abf1d6
+  - enabled: 1
+    path: Assets/Scenes/LabFailed.unity
+    guid: a00a5d4d52c10814db04c7d052bdf46a
   m_configObjects: {}
