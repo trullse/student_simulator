@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class IntroControl : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class IntroControl : MonoBehaviour
     IEnumerator IntroWait()
     {
         yield return new WaitForSeconds(waiting);
+        PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
         SceneManager.LoadScene(sceneName);
     }
 }
