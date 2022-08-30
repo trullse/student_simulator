@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waiting: 4
+  sceneName: Sampod2d
 --- !u!1 &2092179040
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +535,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120616176}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e2b0f1b6bb09f514987434210b2b318a, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: e5f122ad91fbdef4f8abd41b477f2913, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1402635147}

@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
             //вызов анимации смерти, если такая будет
 
             onSceneEnd?.Invoke();
-            //StartCoroutine(EndWait());
+            StartCoroutine(EndWait());
             
         }
     }
