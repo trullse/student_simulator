@@ -12,6 +12,7 @@ TagManager:
   - specialLine
   - coin
   - enemy
+  - pool
   layers:
   - Default
   - TransparentFX

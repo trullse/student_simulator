@@ -33,6 +33,7 @@ public class studentMove : MonoBehaviour
 
             this.GetComponent<Transform>().localScale = new Vector2(0, 0);
             
+            
 
             PlayerPrefs.SetInt("money", 0);
             PlayerPrefs.SetFloat("sleep", 1f);
@@ -49,6 +50,7 @@ public class studentMove : MonoBehaviour
         {
 
             Destroy(birds);
+            Destroy(GameObject.Find("poolWithBalls").gameObject);
 
             failPanel.SetActive(true);
             Destroy(this.gameObject);
@@ -59,7 +61,7 @@ public class studentMove : MonoBehaviour
 
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal");
+        //moveInput = Input.GetAxis("Horizontal");
         fallingBody.velocity = new Vector2(moveInput * speed, fallingBody.velocity.y);
         if (fallingBody.position.x >= 2.75f) fallingBody.position = new Vector2(2.75f, fallingBody.position.y);
         if (fallingBody.position.x <= -2.75f) fallingBody.position = new Vector2(-2.75f, fallingBody.position.y);
@@ -75,5 +77,20 @@ public class studentMove : MonoBehaviour
         
         Destroy(_balls.gameObject);
         Destroy(this.gameObject);
+    }
+
+    private void OnEnable()
+    {
+        studentControl.OnMove += SetDirection;
+    }
+
+    private void OnDisable()
+    {
+        studentControl.OnMove -= SetDirection;
+    }
+
+    void SetDirection(float side)
+    {
+        moveInput = side;
     }
 }
