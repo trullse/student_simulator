@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waiting: 4
+  sceneName: VadimGame
 --- !u!1 &2092179040
 GameObject:
   m_ObjectHideFlags: 0

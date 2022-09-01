@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BossIntroControl : MonoBehaviour
 {
@@ -10,5 +11,20 @@ public class BossIntroControl : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         animator.SetTrigger("SceneStart");
+    }
+
+    private void OnEnable()
+    {
+        PlayerMove.onSceneEnd += Fading;
+    }
+
+    private void OnDisable()
+    {
+        PlayerMove.onSceneEnd -= Fading;
+    }
+
+    void Fading()
+    {
+        animator.SetTrigger("SceneEnd");
     }
 }

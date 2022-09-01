@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class IntroControl : MonoBehaviour
 {
     public int waiting;
+    public string sceneName;
 
     void Start()
     {
@@ -15,6 +17,7 @@ public class IntroControl : MonoBehaviour
     IEnumerator IntroWait()
     {
         yield return new WaitForSeconds(waiting);
-        SceneManager.LoadScene("VadimGame");
+        PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+        SceneManager.LoadScene(sceneName);
     }
 }
