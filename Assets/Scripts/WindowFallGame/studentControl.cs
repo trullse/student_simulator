@@ -28,10 +28,25 @@ public class studentControl : MonoBehaviour
 
             switch (touch.phase)
             {
-                case TouchPhase.Moved:
-                    xDirection = touch.position.x > currentX ? 1f : -1f;
+
+                case TouchPhase.Began:
+
+                    xDirection = touch.position.x > currentX ? 1f : (touch.position.x < currentX ? -1f : 0f);
+
+                    break;
+
+
+                case TouchPhase.Stationary:
+                    xDirection = touch.position.x > currentX ? 1f : (touch.position.x < currentX ? -1f : 0f);
+
+                    break;
+
+               case TouchPhase.Moved:
+                    xDirection = touch.position.x > currentX ? 1f : -1f ;
                     
                     break;
+                
+
                 default:
                     currentX = touch.position.x;
                     xDirection = 0f;
