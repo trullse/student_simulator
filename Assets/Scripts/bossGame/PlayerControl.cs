@@ -28,6 +28,12 @@ public class PlayerControl : MonoBehaviour
 
             switch (touch.phase)
             {
+                case TouchPhase.Began:
+                    dragDirection = touch.position.x > startPosition.x ? 1f : (touch.position.x < startPosition.x ? -1f : 0f);
+                    break;
+                case TouchPhase.Stationary:
+                    dragDirection = touch.position.x > startPosition.x ? 1f : (touch.position.x < startPosition.x ? -1f : 0f);
+                    break;
                 case TouchPhase.Moved:
                     dragDirection = touch.position.x > startPosition.x ? 1f : -1f;
                     break;
