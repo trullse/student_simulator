@@ -6,8 +6,14 @@ using System;
 public class studentControl : MonoBehaviour
 {
     public static event Action<float> OnMove;
-    private float currentX = 0f;
+    private float currentX = Screen.width/2;
     private float xDirection = 0f;
+
+   
+
+   
+
+
 
     // Update is called once per frame
     private void Update()
@@ -25,7 +31,7 @@ public class studentControl : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-
+            Debug.Log(Screen.width.ToString());
             switch (touch.phase)
             {
 
@@ -48,7 +54,7 @@ public class studentControl : MonoBehaviour
                 
 
                 default:
-                    currentX = touch.position.x;
+                    
                     xDirection = 0f;
                     break;
             }
