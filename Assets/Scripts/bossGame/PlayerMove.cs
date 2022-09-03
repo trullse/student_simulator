@@ -21,6 +21,8 @@ public class PlayerMove : MonoBehaviour
     private Vector3 screenLeft, screenRight;
     private float objectWidth;
 
+    
+
     private void Start()
     {
         screenLeft = Camera.main.ViewportToWorldPoint(new Vector2(0f, 0f));
@@ -37,22 +39,44 @@ public class PlayerMove : MonoBehaviour
         SceneResult();
     }
 
-    private void Move(float _distanceX)
+    /*private void Move(float _distanceX)
     {
         distanceX = _distanceX;
+    }*/
+
+    private void MoveLeft()
+    {
+        float positionX = rigidbody.position.x - speed * Time.fixedDeltaTime;
+        if (positionX > screenLeft.x + objectWidth)
+        {
+            rigidbody.MovePosition(new Vector2(positionX, rigidbody.position.y));
+        }
+    }
+
+    private void MoveRight()
+    {
+        float positionX = rigidbody.position.x + speed * Time.fixedDeltaTime;
+        if (positionX < screenRight.x - objectWidth)
+        {
+            rigidbody.MovePosition(new Vector2(positionX, rigidbody.position.y));
+        }
     }
 
     private void OnEnable()
     {
-        PlayerControl.OnMove += Move;
+        //PlayerControl.OnMove += Move;
+        Buttons.leftpush += MoveLeft;
+        Buttons.rightpush += MoveRight;
     }
 
     private void OnDisable()
     {
-        PlayerControl.OnMove -= Move;
+        //PlayerControl.OnMove -= Move;
+        Buttons.leftpush -= MoveLeft;
+        Buttons.rightpush -= MoveRight;
     }
 
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         float positionX = rigidbody.position.x + distanceX * speed * Time.fixedDeltaTime;
 
@@ -60,7 +84,7 @@ public class PlayerMove : MonoBehaviour
         {
             rigidbody.MovePosition(new Vector2(positionX, rigidbody.position.y));
         }        
-    }
+    }*/
 
     private void Awake()
     {

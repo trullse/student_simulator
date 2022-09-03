@@ -25,15 +25,16 @@ public class PlayerControl : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
             switch (touch.phase)
             {
                 case TouchPhase.Began:
                     dragDirection = touch.position.x > startPosition.x ? 1f : (touch.position.x < startPosition.x ? -1f : 0f);
                     break;
-                case TouchPhase.Stationary:
-                    dragDirection = touch.position.x > startPosition.x ? 1f : (touch.position.x < startPosition.x ? -1f : 0f);
-                    break;
+                //case TouchPhase.Stationary:
+                    //dragDirection = touch.position.x > startPosition.x ? 1f : (touch.position.x < startPosition.x ? -1f : 0f);
+                    //break;
                 case TouchPhase.Moved:
                     dragDirection = touch.position.x > startPosition.x ? 1f : -1f;
                     break;
