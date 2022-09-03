@@ -11,7 +11,6 @@ public class PlayerMove : MonoBehaviour
     public delegate void OnSceneEnd();
     public static OnSceneEnd onSceneEnd;
 
-    private float distanceX = 0f;
     private float speed = 5f;
     [SerializeField] int lives = 3;
     [SerializeField] int timeToSurvive = 61;
@@ -39,11 +38,6 @@ public class PlayerMove : MonoBehaviour
         SceneResult();
     }
 
-    /*private void Move(float _distanceX)
-    {
-        distanceX = _distanceX;
-    }*/
-
     private void MoveLeft()
     {
         float positionX = rigidbody.position.x - speed * Time.fixedDeltaTime;
@@ -64,27 +58,15 @@ public class PlayerMove : MonoBehaviour
 
     private void OnEnable()
     {
-        //PlayerControl.OnMove += Move;
         Buttons.leftpush += MoveLeft;
         Buttons.rightpush += MoveRight;
     }
 
     private void OnDisable()
     {
-        //PlayerControl.OnMove -= Move;
         Buttons.leftpush -= MoveLeft;
         Buttons.rightpush -= MoveRight;
     }
-
-    /*private void FixedUpdate()
-    {
-        float positionX = rigidbody.position.x + distanceX * speed * Time.fixedDeltaTime;
-
-        if (positionX < screenRight.x - objectWidth && positionX > screenLeft.x + objectWidth)
-        {
-            rigidbody.MovePosition(new Vector2(positionX, rigidbody.position.y));
-        }        
-    }*/
 
     private void Awake()
     {
