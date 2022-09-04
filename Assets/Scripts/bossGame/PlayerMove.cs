@@ -7,7 +7,7 @@ using TMPro;
 
 public class PlayerMove : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D _rigidbody;
     public delegate void OnSceneEnd();
     public static OnSceneEnd onSceneEnd;
 
@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour
 
     private Vector3 screenLeft, screenRight;
     private float objectWidth;
-
+    private bool facingRight = false;
     
 
     private void Start()
@@ -40,20 +40,32 @@ public class PlayerMove : MonoBehaviour
 
     private void MoveLeft()
     {
-        float positionX = rigidbody.position.x - speed * Time.fixedDeltaTime;
+        if (facingRight)
+            Flip();
+        float positionX = _rigidbody.position.x - speed * Time.fixedDeltaTime;
         if (positionX > screenLeft.x + objectWidth)
         {
-            rigidbody.MovePosition(new Vector2(positionX, rigidbody.position.y));
+            _rigidbody.MovePosition(new Vector2(positionX, _rigidbody.position.y));
         }
     }
 
     private void MoveRight()
     {
-        float positionX = rigidbody.position.x + speed * Time.fixedDeltaTime;
+        if (!facingRight)
+            Flip();
+        float positionX = _rigidbody.position.x + speed * Time.fixedDeltaTime;
         if (positionX < screenRight.x - objectWidth)
         {
-            rigidbody.MovePosition(new Vector2(positionX, rigidbody.position.y));
+            _rigidbody.MovePosition(new Vector2(positionX, _rigidbody.position.y));
         }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 
     private void OnEnable()
@@ -70,7 +82,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

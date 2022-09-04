@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6f4b5a13dfc60a24aba0e2bd99d69a7b
+guid: 9cf3cee35eac3164b86a3a6f5ee8906f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,211 +128,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin1
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_0"
       rect:
         serializedVersion: 2
-        x: 530
-        y: 520
-        width: 60
-        height: 90
+        x: 32
+        y: 352
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f0a6805c6a3d7241849b3da5ce103b8
-      internalID: -1862848799
+      spriteID: dd00d6d930c6b3146801285eb8ba6d4f
+      internalID: -457162769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin2
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_1"
       rect:
         serializedVersion: 2
-        x: 620
-        y: 520
-        width: 60
-        height: 90
+        x: 208
+        y: 352
+        width: 128
+        height: 152
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a22ffaf1a274cf4fb0e2e54aecf72de
-      internalID: 561624714
+      spriteID: 878086e02de6795489381c57782ee6ff
+      internalID: 626463381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meteorit1
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_2"
       rect:
         serializedVersion: 2
-        x: 750
-        y: 520
-        width: 50
-        height: 90
+        x: 408
+        y: 416
+        width: 48
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48cb4cf3002029247a7f5389d40a3741
-      internalID: 1524773226
+      spriteID: bcd734e1cf74a9c46b8c18c8ed6178b2
+      internalID: 828509811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meteorit2
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_3"
       rect:
         serializedVersion: 2
-        x: 840
-        y: 520
-        width: 50
-        height: 90
+        x: 480
+        y: 416
+        width: 48
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15a15cb586a8842459cadec217e9a795
-      internalID: 1579005285
+      spriteID: 595248141d09483428437acda1f878a7
+      internalID: 1966504000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: student1
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_4"
       rect:
         serializedVersion: 2
-        x: 520
-        y: 340
-        width: 80
-        height: 100
+        x: 560
+        y: 416
+        width: 40
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57ed61c1ad6083f428aa0084b5e55b4f
-      internalID: 1688168978
+      spriteID: b8a33b51adc16ab4d8b5bca49fa3a32d
+      internalID: 2080271189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: student2
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_5"
       rect:
         serializedVersion: 2
-        x: 620
-        y: 340
-        width: 80
-        height: 100
+        x: 624
+        y: 416
+        width: 40
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e579b60e9ae59f6418fc6dd902e1c2bf
-      internalID: 416501274
+      spriteID: bd3567d68f03e8e4bb25f8880314461e
+      internalID: 178595376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: student3
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_6"
       rect:
         serializedVersion: 2
-        x: 720
-        y: 340
-        width: 80
-        height: 100
+        x: 688
+        y: 416
+        width: 40
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0504ffb468d9a4f40bf700f0b3566c8c
-      internalID: 109235309
+      spriteID: 247704e123fe24d439c926777e6e4a8c
+      internalID: 506377336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: student4
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_8"
       rect:
         serializedVersion: 2
-        x: 820
-        y: 340
-        width: 80
-        height: 100
+        x: 400
+        y: 272
+        width: 64
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88eab72db7ce2fc4590d2469ad874d56
-      internalID: 15764000
+      spriteID: 7e1cb6fa000b0864094c0a567de32252
+      internalID: 1661648500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brick1
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_9"
       rect:
         serializedVersion: 2
-        x: 60
-        y: 440
-        width: 160
-        height: 160
+        x: 480
+        y: 272
+        width: 64
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03651870578790346813c1eaaf8d1b7a
-      internalID: 1051395297
+      spriteID: 7896cdfef553ec1488422143be7b38ed
+      internalID: 247996263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brick2
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_10"
       rect:
         serializedVersion: 2
-        x: 280
-        y: 440
-        width: 160
-        height: 190
+        x: 560
+        y: 272
+        width: 64
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b9ebd60593e9fd439d223ef6079a2b3
-      internalID: -358401763
+      spriteID: cb45864bab7b9954bb933aa149013a10
+      internalID: -1779037867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_11"
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 272
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff40b2bcd3d7854fb31f73066a23deb
+      internalID: 673987397
       vertices: []
       indices: 
       edges: []
@@ -348,16 +369,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      student1: 1688168978
-      brick2: -358401763
-      meteorit1: 1524773226
-      student3: 109235309
-      coin2: 561624714
-      brick1: 1051395297
-      student4: 15764000
-      student2: 416501274
-      meteorit2: 1579005285
-      coin1: -1862848799
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_4": 2080271189
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_0": -457162769
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_7": 1296019800
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_8": 1661648500
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_2": 828509811
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_9": 247996263
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_5": 178595376
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_10": -1779037867
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_6": 506377336
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_1": 626463381
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_3": 1966504000
+      "\u0442\u0435\u043A\u0441\u0442\u0443\u0440\u044B\u0418\u0441\u043F\u04403_11": 673987397
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
