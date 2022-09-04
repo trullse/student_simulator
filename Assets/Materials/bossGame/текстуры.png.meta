@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -131,12 +131,12 @@ TextureImporter:
       name: coin1
       rect:
         serializedVersion: 2
-        x: 528
-        y: 519
-        width: 63
-        height: 93
+        x: 530
+        y: 520
+        width: 60
+        height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: coin2
       rect:
         serializedVersion: 2
-        x: 618
-        y: 519
-        width: 64
-        height: 94
+        x: 620
+        y: 520
+        width: 60
+        height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: meteorit1
       rect:
         serializedVersion: 2
-        x: 746
-        y: 517
-        width: 57
-        height: 96
+        x: 750
+        y: 520
+        width: 50
+        height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: meteorit2
       rect:
         serializedVersion: 2
-        x: 836
-        y: 517
-        width: 56
-        height: 97
+        x: 840
+        y: 520
+        width: 50
+        height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: student1
       rect:
         serializedVersion: 2
-        x: 517
-        y: 337
-        width: 85
-        height: 105
+        x: 520
+        y: 340
+        width: 80
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: student2
       rect:
         serializedVersion: 2
-        x: 618
-        y: 337
-        width: 85
-        height: 105
+        x: 620
+        y: 340
+        width: 80
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: student3
       rect:
         serializedVersion: 2
-        x: 717
-        y: 337
-        width: 85
-        height: 105
+        x: 720
+        y: 340
+        width: 80
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: student4
       rect:
         serializedVersion: 2
-        x: 817
-        y: 337
-        width: 85
-        height: 105
+        x: 820
+        y: 340
+        width: 80
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: brick1
       rect:
         serializedVersion: 2
-        x: 58
-        y: 439
-        width: 164
-        height: 163
+        x: 60
+        y: 440
+        width: 160
+        height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: brick2
       rect:
         serializedVersion: 2
-        x: 276
-        y: 438
-        width: 167
-        height: 195
+        x: 280
+        y: 440
+        width: 160
+        height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
