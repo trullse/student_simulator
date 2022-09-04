@@ -14,6 +14,9 @@ public class StudyScript : MonoBehaviour
     private bool isStudying;
     private float studyIncrease = 0.1f;
     private float currentStudyProgress;
+
+    public GameObject WindowButton;
+
     void Start()
     {
         player = playerObj.GetComponent<Player>();
@@ -26,6 +29,8 @@ public class StudyScript : MonoBehaviour
             defendLabaBttn.gameObject.SetActive(false);
 
         isStudying = false;
+
+        WindowButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,6 +41,11 @@ public class StudyScript : MonoBehaviour
             player.IncreaseStudy(studyIncrease * Time.deltaTime);
             IncreaseStudyProgress(studyIncrease * Time.deltaTime);
             progressBar.SetStudyProgress(currentStudyProgress);
+        }
+
+        if (player.currentFood <= 0.15f && player.currentSleep <= 0.15f && player.currentStudy <= 0.15f && player.currentToilet <= 0.15f)
+        {
+            WindowButton.SetActive(true);
         }
     }
 
