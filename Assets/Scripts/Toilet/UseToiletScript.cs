@@ -10,12 +10,14 @@ public class UseToiletScript : MonoBehaviour
     public SpriteRenderer opened;
     public SpriteRenderer closed;
 
+    private GameObject studentTexture;
+
     private bool isUsing;
     private float toiletIncrease = 0.1f;
     void Start()
     {
         player = playerObj.GetComponent<Player>();
-
+        studentTexture = GameObject.Find("ToiletStudent");
         isUsing = false;
     }
 
@@ -32,6 +34,7 @@ public class UseToiletScript : MonoBehaviour
 
                 opened.color = new Color(1f, 1f, 1f, 1f);
                 closed.color = new Color(1f, 1f, 1f, 0);
+                studentTexture.SetActive(true);
             }
             else
             {
@@ -48,6 +51,7 @@ public class UseToiletScript : MonoBehaviour
 
             opened.color = new Color(1f, 1f, 1f, 0);
             closed.color = new Color(1f, 1f, 1f, 1f);
+            studentTexture.SetActive(false);
         }
 
         player.ToiletStatusChange(isUsing);

@@ -11,6 +11,11 @@ public class StudyScript : MonoBehaviour
     private StudyProgressBar progressBar;
     public Button defendLabaBttn;
 
+
+    private GameObject studyingStudentTexture;
+    private GameObject sadStudentTexture;
+
+
     private bool isStudying;
     private float studyIncrease = 0.1f;
     private float currentStudyProgress;
@@ -31,6 +36,10 @@ public class StudyScript : MonoBehaviour
         isStudying = false;
 
         WindowButton.SetActive(false);
+
+        studyingStudentTexture = GameObject.Find("SampodStudent");
+        studyingStudentTexture.SetActive(false);
+        sadStudentTexture = GameObject.Find("SampodSadStudent");
     }
 
     // Update is called once per frame
@@ -41,6 +50,13 @@ public class StudyScript : MonoBehaviour
             player.IncreaseStudy(studyIncrease * Time.deltaTime);
             IncreaseStudyProgress(studyIncrease * Time.deltaTime);
             progressBar.SetStudyProgress(currentStudyProgress);
+            studyingStudentTexture.SetActive(true);
+            sadStudentTexture.SetActive(false);
+        }
+        else
+        {
+            studyingStudentTexture.SetActive(false);
+            sadStudentTexture.SetActive(true);
         }
 
         if (player.currentFood <= 0.15f && player.currentSleep <= 0.15f && player.currentStudy <= 0.15f && player.currentToilet <= 0.15f)
