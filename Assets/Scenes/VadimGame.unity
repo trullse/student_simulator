@@ -1012,6 +1012,8 @@ GameObject:
   - component: {fileID: 1077788116}
   - component: {fileID: 1077788118}
   - component: {fileID: 1077788117}
+  - component: {fileID: 1077788120}
+  - component: {fileID: 1077788119}
   m_Layer: 0
   m_Name: playerText
   m_TagString: Untagged
@@ -1106,6 +1108,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1077788119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077788115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68c4c77277098a4084f59d90f2ed331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  timeToSurvive: 60
+--- !u!50 &1077788120
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077788115}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1136722217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,8 +2284,7 @@ GameObject:
   - component: {fileID: 1964579060}
   - component: {fileID: 1964579059}
   - component: {fileID: 1964579058}
-  - component: {fileID: 1964579057}
-  - component: {fileID: 1964579063}
+  - component: {fileID: 1964579064}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -2256,27 +2292,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1964579057
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964579056}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &1964579058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2371,20 +2386,27 @@ Transform:
   m_Father: {fileID: 1390262728}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1964579063
-MonoBehaviour:
+--- !u!50 &1964579064
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964579056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68c4c77277098a4084f59d90f2ed331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 3
-  timeToSurvive: 60
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2092179040
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class PlayerMove : MonoBehaviour
         screenLeft = Camera.main.ViewportToWorldPoint(new Vector2(0f, 0f));
         screenRight = Camera.main.ViewportToWorldPoint(new Vector2(1f, 1f));
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        Debug.Log("object width " + objectWidth);
         money = PlayerPrefs.GetInt("money");
         StartCoroutine(WinGame());
     }
@@ -109,7 +110,12 @@ public class PlayerMove : MonoBehaviour
     {
         onSceneEnd?.Invoke();
         string sceneName = isDead ? "LabFailed" : "LabPassed";
-        money += 40;
+        if (!isDead)
+        {
+            money += 40;
+            PlayerPrefs.SetFloat("study", 1f);
+        }
+
         int delta = money - PlayerPrefs.GetInt("money");
         PlayerPrefs.SetInt("delta", delta);
         PlayerPrefs.SetInt("money", money);
