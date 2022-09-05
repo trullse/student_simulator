@@ -17,7 +17,8 @@ public class StudyScript : MonoBehaviour
 
 
     private bool isStudying;
-    private float studyIncrease = 0.1f;
+    private float studyIncrease = 0.04f;
+    private float labaIncrease = 0.07f;
     private float currentStudyProgress;
 
     public GameObject WindowButton;
@@ -48,7 +49,7 @@ public class StudyScript : MonoBehaviour
         if (isStudying)
         {
             player.IncreaseStudy(studyIncrease * Time.deltaTime);
-            IncreaseStudyProgress(studyIncrease * Time.deltaTime);
+            IncreaseStudyProgress(labaIncrease * Time.deltaTime);
             progressBar.SetStudyProgress(currentStudyProgress);
             studyingStudentTexture.SetActive(true);
             sadStudentTexture.SetActive(false);
