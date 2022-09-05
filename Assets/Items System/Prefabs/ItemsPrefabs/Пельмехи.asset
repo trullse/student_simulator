@@ -15,6 +15,6 @@ MonoBehaviour:
   ItemName: "\u041F\u0435\u043B\u044C\u043C\u0435\u0445\u0438"
   ID: 3
   Calories: 1
-  ItemImage: {fileID: 21300000, guid: 0da5933abd8caf24cb4c09ebfa3e7beb, type: 3}
+  ItemImage: {fileID: 1616036301, guid: 86760c8cc3e80c94ab39acbe95e47f6c, type: 3}
   ItemNumber: 0
   ItemPrice: 40
