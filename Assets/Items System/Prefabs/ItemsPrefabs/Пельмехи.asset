@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751a382ffc9aa7242be7b8bda7b27bc7, type: 3}
   m_Name: "\u041F\u0435\u043B\u044C\u043C\u0435\u0445\u0438"
   m_EditorClassIdentifier: 
-  ItemName: "\u041F\u0435\u043B\u044C\u043C\u0435\u0445\u0438"
+  ItemName: Pelmehy
   ID: 3
   Calories: 1
   ItemImage: {fileID: 1616036301, guid: 86760c8cc3e80c94ab39acbe95e47f6c, type: 3}

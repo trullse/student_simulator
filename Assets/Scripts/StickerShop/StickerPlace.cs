@@ -21,6 +21,7 @@ public class StickerPlace : MonoBehaviour
             {
                 if (laptop.allSticks.allStickers[i].ID == tempID)
                 {
+                    bttn.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
                     bttn.GetComponent<Image>().sprite = laptop.allSticks.allStickers[i].StickerImage;
                 }
             }
@@ -31,6 +32,7 @@ public class StickerPlace : MonoBehaviour
     {
         if (laptop.source.IsActive())
         {
+            bttn.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
             bttn.GetComponent<Image>().sprite = laptop.toPlace.StickerImage;
             laptop.PositionChoosen(PlaceID);
         }
