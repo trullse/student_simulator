@@ -64,6 +64,10 @@ public class StudyScript : MonoBehaviour
         {
             WindowButton.SetActive(true);
         }
+        else
+        {
+            WindowButton.SetActive(false);
+        }
     }
 
     public void IncreaseStudyProgress(float study)
