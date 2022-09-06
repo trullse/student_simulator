@@ -26,6 +26,8 @@ public class StudyScript : MonoBehaviour
     private Animator animator;
     public GameObject Caution;
 
+    private int hiddenWindow = 3;
+
     void Start()
     {
         player = playerObj.GetComponent<Player>();
@@ -128,5 +130,11 @@ public class StudyScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         
         Caution.SetActive(false);
+    }
+
+    public void OnHiddenWindowClick()
+    {
+        --hiddenWindow;
+        if (hiddenWindow == 0) SceneManager.LoadScene("FlyingDownScene");
     }
 }
