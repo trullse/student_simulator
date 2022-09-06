@@ -15,11 +15,16 @@ public class Market : MonoBehaviour
     private List<GameObject> list = new List<GameObject>();
     private VerticalLayoutGroup _group;
 
+    private Animator animator;
+    public GameObject Caution;
+
     // Start is called before the first frame update
     void Start()
     {
         //money = PlayerPrefs.GetInt("money");
         player = _playerObj.GetComponent<Player>();
+        animator = Caution.GetComponent<Animator>();
+        Caution.SetActive(false);
 
         RectTransform rectT = content.GetComponent<RectTransform>();
         rectT.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
@@ -68,5 +73,18 @@ public class Market : MonoBehaviour
         {
             player.IncreaseFood(item.Calories);
         }
+        else
+        {
+            Debug.Log("trying to buy");
+            Caution.SetActive(true);
+            StartCoroutine(CloseCaution());
+        }
+    }
+
+    IEnumerator CloseCaution()
+    {
+        yield return new WaitForSeconds(2);
+
+        Caution.SetActive(false);
     }
 }
