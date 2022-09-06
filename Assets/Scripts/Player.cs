@@ -11,21 +11,22 @@ public class Player : MonoBehaviour
 
     public float maxSleep = 1f;
     public float currentSleep;
-    private float sleepDecrease = 0.02f;
+    private float sleepDecrease = 0.0001f;
+    private float sleepIncrease = 0.1f;
     private bool isSleeping;
 
     public float maxFood = 1f;
     public float currentFood;
-    private float foodDecrease = 0.02f;
+    private float foodDecrease = 0.0001f;
 
     public float maxToilet = 1f;
     public float currentToilet;
-    private float toiletDecrease = 0.02f;
+    private float toiletDecrease = 0.001f;
     private bool isUsingToilet;
 
     public float maxStudy = 1f;
     public float currentStudy;
-    private float studyDecrease = 0.02f;
+    private float studyDecrease = 0.001f;
     private bool isStudying;
 
     public SleepBarScript sleepBar;
@@ -34,6 +35,8 @@ public class Player : MonoBehaviour
     public StudyBarScript studyBar;
 
     public bool isBusy;
+
+    private
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +65,8 @@ public class Player : MonoBehaviour
 
         currentStudy = (PlayerPrefs.HasKey("study")) ? PlayerPrefs.GetFloat("study") : 1f;
         studyBar.SetStudy(currentStudy);
-        //OfflineTime();
+
+        OfflineTime();
     }
 
     public void StudyStatusChange(bool toStudy)
@@ -129,7 +133,15 @@ public class Player : MonoBehaviour
         if (PlayerPrefs.HasKey("LastSession"))
         {
             timeSpan = DateTime.Now - DateTime.Parse(PlayerPrefs.GetString("LastSession"));
-            DecreaseSleep(sleepDecrease * (float)timeSpan.TotalSeconds);
+            if (PlayerPrefs.HasKey("isSleeping"))
+            {
+                IncreaseSleep(sleepIncrease * ((float)timeSpan.TotalSeconds));
+                PlayerPrefs.DeleteKey("isSleeping");
+            }
+            else
+            {
+                DecreaseSleep(sleepDecrease * (float)timeSpan.TotalSeconds);
+            }
             sleepBar.SetSleep(currentSleep);
 
             DecreaseFood(foodDecrease * (float)timeSpan.TotalSeconds);
@@ -140,6 +152,8 @@ public class Player : MonoBehaviour
 
             DecreaseStudy(studyDecrease * (float)timeSpan.TotalSeconds);
             studyBar.SetStudy(currentStudy);
+
+            PlayerPrefs.DeleteKey("LastSession");
         }
     }
 
@@ -149,6 +163,10 @@ public class Player : MonoBehaviour
         if (pause)
         {
             PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+                if (isSleeping)
+            {
+                PlayerPrefs.SetInt("isSleeping", 1);
+            }
         }
     }
 
@@ -156,6 +174,10 @@ public class Player : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+        if (isSleeping)
+        {
+            PlayerPrefs.SetInt("isSleeping", 1);
+        }
     }
 
 #endif
