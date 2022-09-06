@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StudyScript : MonoBehaviour
 {
@@ -22,11 +23,16 @@ public class StudyScript : MonoBehaviour
     private float currentStudyProgress;
 
     public GameObject WindowButton;
+    private Animator animator;
+    public GameObject Caution;
 
     void Start()
     {
         player = playerObj.GetComponent<Player>();
         progressBar = progressBarObj.GetComponent<StudyProgressBar>();
+        //animator = GetComponent<Animator>();
+        animator = Caution.GetComponent<Animator>();
+
         currentStudyProgress = (PlayerPrefs.HasKey("study_progress")) ? PlayerPrefs.GetFloat("study_progress") : 0f;
         progressBar.SetStudyProgress(currentStudyProgress);
         if (currentStudyProgress == 1f)
@@ -41,6 +47,8 @@ public class StudyScript : MonoBehaviour
         studyingStudentTexture = GameObject.Find("SampodStudent");
         studyingStudentTexture.SetActive(false);
         sadStudentTexture = GameObject.Find("SampodSadStudent");
+
+        Caution.SetActive(false);
     }
 
     // Update is called once per frame
@@ -100,9 +108,25 @@ public class StudyScript : MonoBehaviour
 
     public void OnDefendBttnClick()
     {
-        currentStudyProgress = 0f;
-        PlayerPrefs.SetFloat("study_progress", currentStudyProgress);
-        progressBar.SetStudyProgress(currentStudyProgress);
-        defendLabaBttn.gameObject.SetActive(false);
+        if (player.currentFood <= 0.15f && player.currentSleep <= 0.15f && player.currentStudy <= 0.15f && player.currentToilet <= 0.15f)
+        {
+            Caution.SetActive(true);
+            StartCoroutine(CloseCaution());
+        }
+        else
+        {
+            currentStudyProgress = 0f;
+            PlayerPrefs.SetFloat("study_progress", currentStudyProgress);
+            progressBar.SetStudyProgress(currentStudyProgress);
+            defendLabaBttn.gameObject.SetActive(false);
+            SceneManager.LoadScene("BossIntro");
+        }        
+    }
+
+    IEnumerator CloseCaution()
+    {
+        yield return new WaitForSeconds(2);
+        
+        Caution.SetActive(false);
     }
 }
