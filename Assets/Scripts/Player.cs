@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float maxSleep = 1f;
     public float currentSleep;
     private float sleepDecrease = 0.0001f;
+    private float sleepIncrease = 0.1f;
     private bool isSleeping;
 
     public float maxFood = 1f;
@@ -132,7 +133,15 @@ public class Player : MonoBehaviour
         if (PlayerPrefs.HasKey("LastSession"))
         {
             timeSpan = DateTime.Now - DateTime.Parse(PlayerPrefs.GetString("LastSession"));
-            DecreaseSleep(sleepDecrease * (float)timeSpan.TotalSeconds);
+            if (PlayerPrefs.HasKey("isSleeping"))
+            {
+                IncreaseSleep(sleepIncrease * ((float)timeSpan.TotalSeconds));
+                PlayerPrefs.DeleteKey("isSleeping");
+            }
+            else
+            {
+                DecreaseSleep(sleepDecrease * (float)timeSpan.TotalSeconds);
+            }
             sleepBar.SetSleep(currentSleep);
 
             DecreaseFood(foodDecrease * (float)timeSpan.TotalSeconds);
@@ -154,6 +163,10 @@ public class Player : MonoBehaviour
         if (pause)
         {
             PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+                if (isSleeping)
+            {
+                PlayerPrefs.SetInt("isSleeping", 1);
+            }
         }
     }
 
@@ -161,6 +174,10 @@ public class Player : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+        if (isSleeping)
+        {
+            PlayerPrefs.SetInt("isSleeping", 1);
+        }
     }
 
 #endif

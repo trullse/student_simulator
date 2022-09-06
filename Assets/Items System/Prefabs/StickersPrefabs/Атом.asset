@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d1a98adcaeda04089b5cd5c2b3d524, type: 3}
   m_Name: "\u0410\u0442\u043E\u043C"
   m_EditorClassIdentifier: 
-  StickerName: "\u0410\u0442\u043E\u043C"
+  StickerName: 
   ID: 1
   StickerImage: {fileID: 21300000, guid: 5a16f5a58802c184f9e917c0af7dee20, type: 3}
   StickerPrice: 100

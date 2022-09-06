@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751a382ffc9aa7242be7b8bda7b27bc7, type: 3}
   m_Name: "\u0411\u0443\u0442\u0435\u0440"
   m_EditorClassIdentifier: 
-  ItemName: "\u0411\u0443\u0442\u0435\u0440"
+  ItemName: Buter
   ID: 7
   Calories: 0.4
-  ItemImage: {fileID: 21300000, guid: 0704eac8f8f256d4e8fc63fb5e7f1b14, type: 3}
+  ItemImage: {fileID: -1286310053, guid: 86760c8cc3e80c94ab39acbe95e47f6c, type: 3}
   ItemNumber: 0
   ItemPrice: 20

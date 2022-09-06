@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751a382ffc9aa7242be7b8bda7b27bc7, type: 3}
   m_Name: "\u0414\u043E\u0448\u0438\u043A"
   m_EditorClassIdentifier: 
-  ItemName: "\u0414\u043E\u0448\u0438\u043A"
+  ItemName: Doshik
   ID: 4
   Calories: 0.3
-  ItemImage: {fileID: 21300000, guid: f0394e040fe29b542a049e20d33b5b0b, type: 3}
+  ItemImage: {fileID: 1578076740, guid: 86760c8cc3e80c94ab39acbe95e47f6c, type: 3}
   ItemNumber: 0
   ItemPrice: 10
