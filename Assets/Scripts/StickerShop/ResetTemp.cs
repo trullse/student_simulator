@@ -36,4 +36,9 @@ public class ResetTemp : MonoBehaviour
         SceneManager.LoadScene("ShopStickers");
     }
 
+    public void OnNotOkClicked()
+    {
+        CautionOk.SetActive(false);
+    }
+
 }
