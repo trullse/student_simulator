@@ -15067,16 +15067,16 @@ struct U3CShutUpCoroutineU3Ed__17_t924D616F8A607F7CDC0A34A86E758A9826C29576  : p
 	naighbourSpeak_tB5EA793EC8E4D32BF6005870BBF0D58FBC70824F* ___U3CU3E4__this_3;
 };
 
-// studentMove/<IntroWait>d__11
-struct U3CIntroWaitU3Ed__11_t35B52A252A52330AB26DF0AAAA11D16AE1DA74A7  : public RuntimeObject
+// studentMove/<IntroWait>d__12
+struct U3CIntroWaitU3Ed__12_t79001DF04ABB84E1829BEEE86DA380F6827827AD  : public RuntimeObject
 {
-	// System.Int32 studentMove/<IntroWait>d__11::<>1__state
+	// System.Int32 studentMove/<IntroWait>d__12::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object studentMove/<IntroWait>d__11::<>2__current
+	// System.Object studentMove/<IntroWait>d__12::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// studentMove studentMove/<IntroWait>d__11::<>4__this
+	// studentMove studentMove/<IntroWait>d__12::<>4__this
 	studentMove_t438AC1EB4D257CAD73D8CF57D6BFDD511843EA8B* ___U3CU3E4__this_2;
-	// UnityEngine.GameObject studentMove/<IntroWait>d__11::<_balls>5__1
+	// UnityEngine.GameObject studentMove/<IntroWait>d__12::<_balls>5__1
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___U3C_ballsU3E5__1_3;
 };
 
@@ -48151,8 +48151,10 @@ struct studentMove_t438AC1EB4D257CAD73D8CF57D6BFDD511843EA8B  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___failPanel_9;
 	// UnityEngine.GameObject studentMove::birds
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___birds_10;
+	// System.Int32 studentMove::money
+	int32_t ___money_11;
 	// UnityEngine.Rigidbody2D studentMove::fallingBody
-	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ___fallingBody_11;
+	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ___fallingBody_12;
 };
 
 // UnityEngine.UI.Dropdown/DropdownItem
@@ -56860,7 +56862,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3338 = { sizeof(MuteSound_t5
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3339;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3339 = { sizeof(studentControl_t5257D15995A702B7FCF3B568615BD9993EECB0B0), -1, sizeof(studentControl_t5257D15995A702B7FCF3B568615BD9993EECB0B0_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3340;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3340 = { sizeof(U3CIntroWaitU3Ed__11_t35B52A252A52330AB26DF0AAAA11D16AE1DA74A7), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3340 = { sizeof(U3CIntroWaitU3Ed__12_t79001DF04ABB84E1829BEEE86DA380F6827827AD), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3341;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3341 = { sizeof(studentMove_t438AC1EB4D257CAD73D8CF57D6BFDD511843EA8B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3342;

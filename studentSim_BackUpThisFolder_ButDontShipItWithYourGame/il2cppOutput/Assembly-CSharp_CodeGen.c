@@ -600,18 +600,18 @@ extern void studentMove_OnDisable_m55EC64C49A34A129789A6178A5A5C004F3E3BC56 (voi
 extern void studentMove_SetDirection_mF976E66776CBBD0F4A333C74D8AFAD2775038044 (void);
 // 0x00000126 System.Void studentMove::.ctor()
 extern void studentMove__ctor_mDC9DF1AF88067F8F96F0A9E3FDE166AC2A23B7C2 (void);
-// 0x00000127 System.Void studentMove/<IntroWait>d__11::.ctor(System.Int32)
-extern void U3CIntroWaitU3Ed__11__ctor_m8E773141A76940F1C4824F0A77AB21E149612622 (void);
-// 0x00000128 System.Void studentMove/<IntroWait>d__11::System.IDisposable.Dispose()
-extern void U3CIntroWaitU3Ed__11_System_IDisposable_Dispose_m6B03D9F090BEFD04D8F4F6361B775695CA6389AF (void);
-// 0x00000129 System.Boolean studentMove/<IntroWait>d__11::MoveNext()
-extern void U3CIntroWaitU3Ed__11_MoveNext_m5897339FA6DA1B15D048C8EE470366A19AFAFD65 (void);
-// 0x0000012A System.Object studentMove/<IntroWait>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CIntroWaitU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE08D833F82C54374009479A02EE004C465F09DB3 (void);
-// 0x0000012B System.Void studentMove/<IntroWait>d__11::System.Collections.IEnumerator.Reset()
-extern void U3CIntroWaitU3Ed__11_System_Collections_IEnumerator_Reset_m6081215EFBB0D2C44D41E01E1B73BDE4ACAF429B (void);
-// 0x0000012C System.Object studentMove/<IntroWait>d__11::System.Collections.IEnumerator.get_Current()
-extern void U3CIntroWaitU3Ed__11_System_Collections_IEnumerator_get_Current_m3221316EC7437CC0ECCCE1B65BE73525EC18E4D9 (void);
+// 0x00000127 System.Void studentMove/<IntroWait>d__12::.ctor(System.Int32)
+extern void U3CIntroWaitU3Ed__12__ctor_mC55D76291851CF1B5B8328C979D58F2747C708AA (void);
+// 0x00000128 System.Void studentMove/<IntroWait>d__12::System.IDisposable.Dispose()
+extern void U3CIntroWaitU3Ed__12_System_IDisposable_Dispose_m0686BA0863B3EB2862A22347C8D54C8163BB6578 (void);
+// 0x00000129 System.Boolean studentMove/<IntroWait>d__12::MoveNext()
+extern void U3CIntroWaitU3Ed__12_MoveNext_m31AA2C65F6F9ABFCDD97436CF6E5A5321358408F (void);
+// 0x0000012A System.Object studentMove/<IntroWait>d__12::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CIntroWaitU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC4592EA55617FB836D5D8F2F47816B358924E7D0 (void);
+// 0x0000012B System.Void studentMove/<IntroWait>d__12::System.Collections.IEnumerator.Reset()
+extern void U3CIntroWaitU3Ed__12_System_Collections_IEnumerator_Reset_m0C99B793721CB714DAA34E0F8DB464B336ABED3E (void);
+// 0x0000012C System.Object studentMove/<IntroWait>d__12::System.Collections.IEnumerator.get_Current()
+extern void U3CIntroWaitU3Ed__12_System_Collections_IEnumerator_get_Current_m478E5F88C2F5940C4FB2C489A6EAA141E5725377 (void);
 static Il2CppMethodPointer s_methodPointers[300] = 
 {
 	AllItems__ctor_mAC04443D024662AE36564D5B1BD632D91A1BC81A,
@@ -908,12 +908,12 @@ static Il2CppMethodPointer s_methodPointers[300] =
 	studentMove_OnDisable_m55EC64C49A34A129789A6178A5A5C004F3E3BC56,
 	studentMove_SetDirection_mF976E66776CBBD0F4A333C74D8AFAD2775038044,
 	studentMove__ctor_mDC9DF1AF88067F8F96F0A9E3FDE166AC2A23B7C2,
-	U3CIntroWaitU3Ed__11__ctor_m8E773141A76940F1C4824F0A77AB21E149612622,
-	U3CIntroWaitU3Ed__11_System_IDisposable_Dispose_m6B03D9F090BEFD04D8F4F6361B775695CA6389AF,
-	U3CIntroWaitU3Ed__11_MoveNext_m5897339FA6DA1B15D048C8EE470366A19AFAFD65,
-	U3CIntroWaitU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE08D833F82C54374009479A02EE004C465F09DB3,
-	U3CIntroWaitU3Ed__11_System_Collections_IEnumerator_Reset_m6081215EFBB0D2C44D41E01E1B73BDE4ACAF429B,
-	U3CIntroWaitU3Ed__11_System_Collections_IEnumerator_get_Current_m3221316EC7437CC0ECCCE1B65BE73525EC18E4D9,
+	U3CIntroWaitU3Ed__12__ctor_mC55D76291851CF1B5B8328C979D58F2747C708AA,
+	U3CIntroWaitU3Ed__12_System_IDisposable_Dispose_m0686BA0863B3EB2862A22347C8D54C8163BB6578,
+	U3CIntroWaitU3Ed__12_MoveNext_m31AA2C65F6F9ABFCDD97436CF6E5A5321358408F,
+	U3CIntroWaitU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC4592EA55617FB836D5D8F2F47816B358924E7D0,
+	U3CIntroWaitU3Ed__12_System_Collections_IEnumerator_Reset_m0C99B793721CB714DAA34E0F8DB464B336ABED3E,
+	U3CIntroWaitU3Ed__12_System_Collections_IEnumerator_get_Current_m478E5F88C2F5940C4FB2C489A6EAA141E5725377,
 };
 static const int32_t s_InvokerIndices[300] = 
 {
