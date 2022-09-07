@@ -10,41 +10,64 @@ public class naighbourSpeak : MonoBehaviour
     private bool exists = false;
     private bool double_clicked = false;
     private bool banned = false;
-    private int ms = 0;
-    private int banned_ms = 0;
-
-
-    private int gaming_ms = 0;
-    private int self_saying_ms = 0;
+  
     private int wnd = 0;
+
+    private Coroutine _coroutine;
+    private Coroutine _self_screaming_coroutine;
+
+
+    private void Start()
+    {
+        _self_screaming_coroutine = StartCoroutine(ScreamingCoroutine());
+    }
+
 
     public void saySomething()
     {
+        
         if (!banned)
         {
+
+            if (self_created)
+            {
+                StopCoroutine(_self_screaming_coroutine);
+                Destroy(self_created.gameObject);
+                StartCoroutine(ScreamingCoroutine());
+            }
+
+
             if (!exists)
             {
                 int windowType = Random.Range(0, answers.Length - 2);
                 created = Instantiate(answers[windowType], new Vector3(0.5f, -2f, 0f), Quaternion.identity);
                 exists = true;
-                gaming_ms = 0;
+                
+                _coroutine = StartCoroutine(BecomeSilent(created));
+                
             }
             else if (exists && !double_clicked)
             {
-                ms = 0;
+               // ms = 0;
                 Destroy(created);
-                // int windowType = Random.Range(0, objects.Length - 1);
+                StopCoroutine(_coroutine);
+                
+
                 created = Instantiate(answers[2], new Vector3(0.5f, -2f, 0f), Quaternion.identity);
                 double_clicked = true;
-                gaming_ms = 0;
+               
+                _coroutine = StartCoroutine(BecomeSilent(created));
             }
             else
             {
-                ms = 0;
+                StopCoroutine(_coroutine);
+               
                 Destroy(created);
                 created = Instantiate(answers[3], new Vector3(0.5f, -2f, 0f), Quaternion.identity);
                 banned = true;
-                gaming_ms = 0;
+                _coroutine = StartCoroutine(BecomeSilent(created));
+                StartCoroutine(BannedCoroutine());
+               
             }
         }
     }
@@ -56,36 +79,51 @@ public class naighbourSpeak : MonoBehaviour
             self_created = Instantiate(free_phrases[wnd], new Vector3(0.5f, -2f, 0f), Quaternion.identity);
             wnd = (wnd == 0) ? 1 : 0;
             exists = true;
+         
         }
     }
 
-    private void Update()
+
+
+    IEnumerator BecomeSilent(GameObject obj)
     {
-        if (created) ms++;
-        if (banned) banned_ms++;
-        if (ms == 500)
-        {
-            Destroy(created);
-            ms = 0;
-            exists = false;
-            double_clicked = false;
-        }
-        if (banned_ms == 1000)
-        {
-            banned = false;
-            banned_ms = 0;
+        yield return new WaitForSeconds(2);
 
-        }
-        gaming_ms++;
-        if (gaming_ms == 3000) dota2Screaming();
-        if (self_created) self_saying_ms++;
-        if(self_saying_ms == 500)
-        {
-            Destroy(self_created);
-            self_saying_ms = 0;
-            exists = false;
-            gaming_ms = 0;
-        }
+        DestructionCentre(obj);
+        double_clicked = false;
+        StartCoroutine(ScreamingCoroutine());
+    }
+
+
+    void DestructionCentre(GameObject obj)
+    {
+        if (obj) Destroy(obj.gameObject);
+        exists = false;
+    }
+
+    IEnumerator BannedCoroutine()
+    {
+        yield return new WaitForSeconds(15);
+        banned = false;
+    }
+
+
+    IEnumerator ScreamingCoroutine()
+    {
+        yield return new WaitForSeconds(10);
+        dota2Screaming();
+        StartCoroutine(ShutUpCoroutine(self_created));
+       
 
     }
+
+    IEnumerator ShutUpCoroutine(GameObject obj)
+    {
+        yield return new WaitForSeconds(2);
+
+        if (obj) Destroy(obj.gameObject);
+        exists = false;
+      
+    }
+
 }

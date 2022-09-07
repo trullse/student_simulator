@@ -22,7 +22,6 @@ public class StudyScript : MonoBehaviour
     private float labaIncrease = 0.07f;
     private float currentStudyProgress;
 
-    public GameObject WindowButton;
     private Animator animator;
     public GameObject Caution;
 
@@ -43,8 +42,6 @@ public class StudyScript : MonoBehaviour
             defendLabaBttn.gameObject.SetActive(false);
 
         isStudying = false;
-
-        WindowButton.SetActive(false);
 
         studyingStudentTexture = GameObject.Find("SampodStudent");
         studyingStudentTexture.SetActive(false);
@@ -70,14 +67,6 @@ public class StudyScript : MonoBehaviour
             sadStudentTexture.SetActive(true);
         }
 
-        if (player.currentFood <= 0.15f && player.currentSleep <= 0.15f && player.currentStudy <= 0.15f && player.currentToilet <= 0.15f)
-        {
-            WindowButton.SetActive(true);
-        }
-        else
-        {
-            WindowButton.SetActive(false);
-        }
     }
 
     public void IncreaseStudyProgress(float study)
