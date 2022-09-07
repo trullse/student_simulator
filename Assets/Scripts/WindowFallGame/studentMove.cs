@@ -14,12 +14,15 @@ public class studentMove : MonoBehaviour
     public GameObject failPanel;
     public GameObject birds;
 
+    private int money;
+    
     private Rigidbody2D fallingBody;
 
     void Start()
     {
         fallingBody = GetComponent<Rigidbody2D>();
         studentRenderer = GetComponent<SpriteRenderer>();
+        money = PlayerPrefs.HasKey("money") ? PlayerPrefs.GetInt("money") : 0;
     }
 
 
@@ -32,18 +35,10 @@ public class studentMove : MonoBehaviour
             Destroy(birds);
 
             this.GetComponent<Transform>().localScale = new Vector2(0, 0);
-            
-            
 
-            PlayerPrefs.SetInt("money", 0);
-            PlayerPrefs.SetFloat("sleep", 1f);
-            PlayerPrefs.SetFloat("food", 1f);
-            PlayerPrefs.SetFloat("toilet", 1f);
-            PlayerPrefs.SetFloat("study", 1f);
+            money += 30;
 
-
-            
-            //     р с р    м ю д н    я д е к ю р э    окщепопетя    я     н а м с к е м х е л    б я е ц н 
+            PlayerPrefs.SetInt("money", money);
         }
 
         if (other.tag == "Bird")
