@@ -8,7 +8,19 @@ public class ResetTemp : MonoBehaviour
     // Start is called before the first frame update
     public AllStickers allSticks;
 
+    public GameObject CautionOk;
+
+    private void Start ()
+    {
+        CautionOk.SetActive(false);
+    }
+
     public void OnResetClicked()
+    {
+        CautionOk.SetActive(true);
+    }
+
+    public void OnOkClicked()
     {
         for (int i = 0; i < allSticks.allStickers.Length; i++)
         {
